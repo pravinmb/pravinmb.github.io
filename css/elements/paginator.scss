@@ -1,0 +1,30 @@
+.paginator {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 4em;
+	user-select: none;
+}
+
+.paginator__icon,
+.paginator__text {
+	padding: 0 12px;
+	user-select: none;
+}
+
+.paginator__icon {
+	text-decoration: none;
+}
+
+.paginator__icon--disabled {
+	color: #BDBDBD;
+	color: var(--normal-outline);
+	pointer-events: none;
+	cursor: default;
+}
+
+.paginator__icon--disabled:hover {
+	color: #BDBDBD;
+	color: var(--normal-outline);
+}

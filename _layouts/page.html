@@ -13,4 +13,27 @@ layout: default
 		<a class="paper__item"><h4 class="paper__item__title">{{ comic.title }}</h4><img class="img paper__item__image" src="{{ site.url }}{{ comic.image }}"></a>
 		{% endfor %}
 	</div>
+	<div class="paginator">
+		{% assign first = site.pages | first %}
+		<a class="paginator__icon{% if first.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ first.url }}">
+			<i class="material-icons">first_page</i>
+		</a>
+		{% assign previousNum = page.slug | minus: 1 %}
+		{% assign previous = site.pages | where: "slug", previousNum | first %}
+		<a class="paginator__icon{% if previous %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ previous.url }}">
+			<i class="material-icons">navigate_before</i>
+		</a>
+
+		<span class="paginator__text">{{ page.slug }} of {{ site.pages.size }}</span>
+		
+		{% assign nextNum = page.slug | plus: 1 %}
+		{% assign next = site.pages | where: "slug", nextNum | first %}
+		<a class="paginator__icon{% if next %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ next.url }}">
+			<i class="material-icons">navigate_next</i>
+		</a>
+		{% assign last = site.pages | last %}
+		<a class="paginator__icon{% if last.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ last.url }}">
+			<i class="material-icons">last_page</i>
+		</a>
+	</div>
 </main>
