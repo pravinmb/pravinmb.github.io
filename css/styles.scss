@@ -2,7 +2,7 @@
 ---
 
 * {
-	font-family: 'Miriam Libre', monospace;
+	font-family: 'Lora', monospace;
 	animation-name: fadeIn;
 	animation-duration: .3s;
 	animation-timing-function: ease-out;
@@ -124,6 +124,8 @@ a:focus {
 	user-select: none;
 	cursor: pointer;
 }
+
+@import "elements/banner.scss";
 
 main {
 	display: block;
