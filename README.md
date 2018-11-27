@@ -9,7 +9,16 @@ Logging the hours I spend on this here. Will update daily. The "commits" column 
 | Day | Time | Duration | Description | Commits |
 |-----|------|----------|-------------|---------| 
 | 11/26 | ~7:00-8:30ish | 1h30 | I only tracked the time I was actually working, not the entire time spent discussing the project. | 61532dd - 4982008 |
-| 11/26 | 9:30-ongoing  | 50m so far | | 5d26b71 - * |
+| 11/26 | 9:30-11:30  | 2h | | 5d26b71 - bbcac5f |
+
+## TODO
+
+```
+Planned features:
+- comments w Disqus
+- sharing on social media? (twitter, facebook "like" button... and the like)
+- content management system - siteleaf.com?
+```
 
 ## Building
 
