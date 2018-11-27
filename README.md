@@ -1,6 +1,6 @@
 # Webcomic Site
 
-Basic docs explaining how the site is built, what dependencies it uses, and how to host/test it locally.
+Basic docs explaining how the site is built, what dependencies it uses, and how to host/test it locally. There is currently a live preview of this site at [jfenn.me/webcomic_test](https://jfenn.me/webcomic_test/).
 
 ## Building
 
