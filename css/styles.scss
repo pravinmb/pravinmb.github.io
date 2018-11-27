@@ -29,30 +29,6 @@
 	--image-brightness-focus: 0;
 }
 
-.--theme-dark,
-.--theme-dark * {
-	--normal-color: #F5F5F5;
-	--normal-color-text: #BDBDBD;
-	--normal-color-focus: #FFFFFF;
-	--normal-color-focusable: #A8A8A8;
-	--normal-background: #212121;
-	--normal-background-dark: #303030;
-	--normal-background-darker: #424242;
-	--normal-overlay: rgba(0, 0, 0, 0.7);
-	--normal-outline: #424242;
-	--normal-outline-dark: #FFFFFF;
-	--normal-focus: rgba(255, 255, 255, 0.1);
-	--normal-focus-light: rgba(255, 255, 255, 0.03);
-	--accent-color: #09A3FF;
-	--accent-color-text: #58BDF9;
-	--accent-background: #2FA4E9;
-	--accent-outline: #09A3FF;
-	--accent-outline-fade: rgba(0, 72, 117, 0.3);
-	--accent-outline-fade2: rgba(0, 72, 117, 0.5);
-	--accent-inverse: #000000;
-	--image-brightness-focus: 2;
-}
-
 @keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}
@@ -125,6 +101,7 @@ a:focus {
 	cursor: pointer;
 }
 
+@import "elements/img.scss";
 @import "elements/banner.scss";
 
 main {
@@ -132,7 +109,6 @@ main {
 	margin-left: 10vw;
 	margin-right: 10vw;
 	margin-bottom: 2em;
-	padding-top: 2em;
 	
 	transition: transform .25s;
 	-moz-transition: transform .25s;

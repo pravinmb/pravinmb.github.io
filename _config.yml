@@ -6,10 +6,10 @@ baseurl: "/"
 collections:
     comics:
         output: true
-        permalink: /comics/:title/
+        permalink: comics/:slug/
     pages:
         output: true
-        permalink: /:title/
+        permalink: :slug/
 
 exclude:
   - Gemfile
