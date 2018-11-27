@@ -5,7 +5,8 @@
 
 .paper__item {
 	display: inline-block;
-	height: 200px;
+	width: calc(100% - 2em);
+	max-height: 100vh;
 	padding: .5em 1em;
 }
 
@@ -16,5 +17,14 @@
 }
 
 .paper__item__image {
-	height: calc(100% - 1.5em);
+	max-height: 100%;
+	max-width: 100%;
+}
+
+@media(min-width: 1000px) {
+	.paper__item {
+		height: 200px;
+		max-height: 200px;
+		width: auto;
+	}
 }
