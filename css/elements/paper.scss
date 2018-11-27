@@ -1,0 +1,22 @@
+.paper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-evenly;
+	margin: 0 -1em;
+}
+
+.paper__item {
+	flex-grow: 1;
+	width: 36%;
+	padding: .5em 1em;
+}
+
+.paper__item__title {
+	margin: 0;
+}
+
+.paper__item__image {
+	width: 100%;
+}

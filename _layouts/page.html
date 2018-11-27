@@ -5,10 +5,12 @@ layout: default
 <a href="{{ site.url }}" class="banner"><h1 class="banner__container"><img class="banner__icon" src="{{ site.url }}/images/favicon.svg">&nbsp;<span class="banner__name">{{ site.name }}</span></h1></a>
 
 <main>
-	{% assign start = page.start | minus: 1 %}
-	{% assign end = page.end | minus: 1 %}
-	{% for i in (start..end) %}
-	{% assign comic = site.comics[i] %}
-	<a class="comic"><h4 class="comic__title">{{ comic.title }}</h4><img class="img comic__image" src="{{ site.url }}{{ comic.image }}"></a>
-	{% endfor %}
+	<div class="paper">
+		{% assign start = page.start | minus: 1 %}
+		{% assign end = page.end | minus: 1 %}
+		{% for i in (start..end) %}
+		{% assign comic = site.comics[i] %}
+		<a class="paper__item"><h4 class="paper__item__title">{{ comic.title }}</h4><img class="img paper__item__image" src="{{ site.url }}{{ comic.image }}"></a>
+		{% endfor %}
+	</div>
 </main>
