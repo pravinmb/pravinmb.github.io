@@ -106,6 +106,7 @@ a:focus {
 @import "elements/dialog.scss";
 @import "elements/paper.scss";
 @import "elements/paginator.scss";
+@import "elements/title.scss";
 
 main {
 	display: block;
@@ -116,14 +117,4 @@ main {
 	transition: transform .25s;
 	-moz-transition: transform .25s;
 	-webkit-transition: transform .25s;
-}
-
-@media(max-width: 599px) {
-	main {
-		padding-top: 16px;
-	}
-
-	.--desktop {
-		display: none;
-	}
 }

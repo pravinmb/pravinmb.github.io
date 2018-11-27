@@ -1,4 +1,28 @@
+.img__container--wide {
+	width: 100vw;
+	margin: 0 -10vw;
+	overflow-x: auto;
+	min-height: 50vh;
+	text-align: center;
+}
+
 .img--wide {
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
+}
+
+@media(min-width: 1000px) {
+	.img__container--wide {
+		width: 100%;
+		margin: 0;
+		overflow-x: hidden;
+		min-height: auto;
+		text-align: left;
+		text-align: start;
+	}
+
+	.img--wide {
+		width: 100%;
+		height: auto;
+	}
 }
