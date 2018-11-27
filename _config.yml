@@ -1,0 +1,20 @@
+name: Webcomic
+description: Pravin's Webcomic
+url: https://jfenn.me/webcomic_test
+baseurl: "/"
+
+collections:
+    comics:
+        output: true
+    pages:
+        output: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
+sass:
+    sass_dir: ./css
