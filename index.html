@@ -1,0 +1,18 @@
+---
+layout: none
+---
+
+<!DOCTYPE html>
+<html>
+	{% assign post = site.pages | last %}
+	<head>
+		<meta http-equiv="refresh" content="0; URL='{{ post.url }}'"
+		<link href="{{ site.url }}/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		Redirecting to <a href="{{ post.url }}">{{ site.url }}{{ post.url }}</a>
+		<script type="text/javascript">
+			window.location = "{{ post.url }}";
+		</script>
+	</body>
+</html>
