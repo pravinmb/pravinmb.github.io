@@ -10,7 +10,7 @@ layout: default
 		{% assign end = page.end | minus: 1 %}
 		{% for i in (start..end) %}
 		{% assign comic = site.comics[i] %}
-		<a class="paper__item"><h4 class="paper__item__title">{{ comic.title }}</h4><img class="img paper__item__image" src="{{ site.url }}{{ comic.image }}"></a>
+		<a class="paper__item" data-url="{{ comic.url }}"><h4 class="paper__item__title">{{ comic.title }}</h4><img class="img paper__item__image" src="{{ site.url }}{{ comic.image }}"></a>
 		{% endfor %}
 	</div>
 	<div class="paginator">
@@ -36,4 +36,20 @@ layout: default
 			<i class="material-icons">last_page</i>
 		</a>
 	</div>
+	<div id="comic_dialog" class="dialog dialog--hidden">
+		<a id="comic_close" class="dialog__close"><i class="material-icons">close</i></a>
+		<iframe id="comic_iframe" class="dialog__content"></iframe>
+	</div>
 </main>
+
+<script>
+	var dialogElement = document.getElementById("comic_dialog");
+	var comicElement = document.getElementById("comic_iframe");
+	var comics = document.getElementsByClassName("paper__item");
+
+	for (var i in comics) {
+		comics[i].addEventListener("click", function() {
+			comicElement.src = "{{ site.url }}" + this.getAttribute("data-url");
+		});
+	}
+</script>
