@@ -37,11 +37,11 @@
 
 @media(min-width: 1000px) {
 	.dialog {
-		padding: calc(10vw + 24px);
+		padding: calc(4vw + 24px) calc(10vw + 24px);
 	}
 
 	.dialog__close {
-		top: calc(10vw + 56px);
+		top: calc(4vw + 56px);
 		right: calc(10vw + 56px);
 	}
 
