@@ -4,9 +4,9 @@ layout: default
 
 <main>
 	<h3 class="title">{{ page.title }}</h3>
-	<div class="img__container--wide">
+	<a class="img__container--wide" href="{{ site.url }}{{ page.image }}" target="_blank">
 		<img class="img--wide" src="{{ site.url }}{{ page.image }}">
-	</div>
+	</a>
 	<br>
 	<div style="text-align: center;">
 		<a id="copy" class="link" style="margin: 8px auto;" title="{{ site.url }}{{ page.url }}"><i class="material-icons">content_copy</i>&nbsp;Permalink</a>
