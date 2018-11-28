@@ -1,7 +1,6 @@
 .paper {
 	display: grid;
 	grid-auto-flow: dense;
-	grid-gap: 1em;
 	justify-content: stretch;
 	align-items: stretch;
 }
@@ -26,6 +25,7 @@
 }
 
 .paper__item__image {
-	min-width: calc(100% - .5em);
-	min-height: calc(100% - .5em);
+	display: block;
+	width: 100%;
+	height: 100%;
 }
