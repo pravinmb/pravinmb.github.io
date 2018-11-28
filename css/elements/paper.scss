@@ -1,16 +1,13 @@
 .paper {
-	margin: 0 -1em;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	display: grid;
+	grid-auto-flow: dense;
+	grid-gap: 1em;
+	justify-content: stretch;
+	align-items: stretch;
 }
 
 .paper__item {
 	display: inline-block;
-	width: calc(100% - 2em);
-	max-height: 100vh;
-	padding: .5em 1em;
 	position: relative;
 }
 
@@ -29,15 +26,6 @@
 }
 
 .paper__item__image {
-	max-height: calc(100% - 1.5em);
-	max-width: 100%;
-	margin-top: 1.5em;
-}
-
-@media(min-width: 1000px) {
-	.paper__item {
-		height: 120px;
-		max-height: 120px;
-		width: auto;
-	}
+	min-width: calc(100% - .5em);
+	min-height: calc(100% - .5em);
 }

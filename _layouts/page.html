@@ -5,12 +5,8 @@ layout: default
 <a href="{{ site.url }}" class="banner"><h1 class="banner__container"><img class="banner__icon" src="{{ site.url }}/images/favicon.svg">&nbsp;<span class="banner__name">{{ site.name }}</span></h1></a>
 
 <main>
-	<div class="paper">
-		{% for i in (page.start..page.end) %}
-		{% assign comic = site.comics | where: "slug", i | first %}
-		<a class="paper__item" data-url="{{ comic.url }}"><h4 class="paper__item__title">{{ comic.title }}</h4><img class="img paper__item__image" src="{{ site.url }}{{ comic.image }}"></a>
-		{% endfor %}
-	</div>
+	{{ content }}
+	
 	<div class="paginator">
 		{% assign first = site.pages | first %}
 		<a class="paginator__icon{% if first.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ first.url }}">

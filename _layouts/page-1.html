@@ -1,0 +1,33 @@
+---
+layout: page
+---
+
+<div class="paper">
+	{% assign num = page.start %}   <!-- 1. 8x2 layout -->
+	{% assign comic = site.comics | where: "slug", num | first %}
+	{% include comic.html comic=comic rowStart=1 rowEnd=3 colStart=1 colEnd=9 %}
+
+	{% assign num = num | plus: 1 %} <!-- 2. 6x1 layout -->
+	{% assign comic = site.comics | where: "slug", num | first %}
+	{% include comic.html comic=comic rowStart=3 rowEnd=4 colStart=1 colEnd=7 %}
+
+	{% assign num = num | plus: 1 %} <!-- 3. 6x2 layout -->
+	{% assign comic = site.comics | where: "slug", num | first %}
+	{% include comic.html comic=comic rowStart=4 rowEnd=6 colStart=1 colEnd=7 %}
+
+	{% assign num = num | plus: 1 %} <!-- 4. 6x2 layout -->
+	{% assign comic = site.comics | where: "slug", num | first %}
+	{% include comic.html comic=comic rowStart=6 rowEnd=8 colStart=1 colEnd=7 %}
+
+	{% assign num = num | plus: 1 %} <!-- 5. 6x1 layout -->
+	{% assign comic = site.comics | where: "slug", num | first %}
+	{% include comic.html comic=comic rowStart=8 rowEnd=9 colStart=1 colEnd=7 %}
+
+	{% assign num = num | plus: 1 %} <!-- 6. 6x1 layout -->
+	{% assign comic = site.comics | where: "slug", num | first %}
+	{% include comic.html comic=comic rowStart=9 rowEnd=10 colStart=1 colEnd=7 %}
+
+	{% assign num = num | plus: 1 %} <!-- 7. 2x7 layout -->
+	{% assign comic = site.comics | where: "slug", num | first %}
+	{% include comic.html comic=comic rowStart=3 rowEnd=11 colStart=7 colEnd=9 %}
+</div>
