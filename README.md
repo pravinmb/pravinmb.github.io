@@ -14,7 +14,7 @@ Logging the hours I spend on this here. Will update daily. The "commits" column 
 | 11/27 | 14:30-15:30 | 1h | | f67da27 - df3b108 |
 | 11/27 | 23:30-00:30 | 1h | | 6046679 |
 | 11/28 | 15:45-16:00 | 15m | | 983aa5c - 6ae2b29 |
-| 11/28 | 17:00-17:30 | 30m | | 03ff068 - 164dee4 |
+| 11/28 | 17:00-18:00 | 1h | | 03ff068 - 358ed19 |
 
 ## TODO
 
