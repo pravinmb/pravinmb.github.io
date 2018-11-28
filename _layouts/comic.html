@@ -7,6 +7,44 @@ layout: default
 	<div class="img__container--wide">
 		<img class="img--wide" src="{{ site.url }}{{ page.image }}">
 	</div>
+	<br>
+	<div style="text-align: center;">
+		<a id="copy" class="link" style="margin: 8px auto;" title="{{ site.url }}{{ page.url }}"><i class="material-icons">content_copy</i>&nbsp;Permalink</a>
+		<input id="copy_text" type="text" value="{{ site.url }}{{ page.url }}" readonly="readonly">
+	</div>
+	<div class="paginator">
+		{% assign first = site.comics | first %}
+		<a class="paginator__icon{% if first.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ first.url }}">
+			<i class="material-icons">first_page</i>
+		</a>
+		{% assign previousNum = page.slug | minus: 1 %}
+		{% assign previous = site.comics | where: "slug", previousNum | first %}
+		<a class="paginator__icon{% if previous %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ previous.url }}">
+			<i class="material-icons">navigate_before</i>
+		</a>
+
+
+		<span class="paginator__text">{{ page.slug }} of {{ site.comics.size }}</span>
+
+		{% assign nextNum = page.slug | plus: 1 %}
+		{% assign next = site.comics | where: "slug", nextNum | first %}
+		<a class="paginator__icon{% if next %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ next.url }}">
+			<i class="material-icons">navigate_next</i>
+		</a>
+
+		{% assign last = site.comics | last %}
+		<a class="paginator__icon{% if last.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ last.url }}">
+			<i class="material-icons">last_page</i>
+		</a>
+	</div>
 	<br><br>
 	{% include comments.html %}
 </main>
+
+<script>
+	var textElement = document.getElementById("copy_text");
+	document.getElementById("copy").addEventListener("click", function() {
+		textElement.select();
+		document.execCommand("copy");
+	});
+</script>

@@ -1,6 +1,9 @@
 .paper {
 	margin: 0 -1em;
-	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .paper__item {
@@ -8,23 +11,33 @@
 	width: calc(100% - 2em);
 	max-height: 100vh;
 	padding: .5em 1em;
+	position: relative;
 }
 
 .paper__item__title {
 	margin: 0;
 	text-align: left;
 	text-align: start;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 1em;
+	position: absolute;
+	top: .5em;
+	left: 1em;
+	right: 1em;
 }
 
 .paper__item__image {
-	max-height: 100%;
+	max-height: calc(100% - 1.5em);
 	max-width: 100%;
+	margin-top: 1.5em;
 }
 
 @media(min-width: 1000px) {
 	.paper__item {
-		height: 200px;
-		max-height: 200px;
+		height: 120px;
+		max-height: 120px;
 		width: auto;
 	}
 }

@@ -46,9 +46,12 @@ layout: default
 	var dialogComicElement = document.getElementById("comic_iframe");
 	var comics = document.getElementsByClassName("paper__item");
 
-	dialogCloseElement.addEventListener("click", function() {
+	var f = function() {
 		dialogElement.classList.add("dialog--hidden");
-	});
+	};
+
+	dialogCloseElement.addEventListener("click", f);
+	dialogElement.addEventListener("click", f);
 
 	for (var i in comics) {
 		if (!comics[i] || !comics[i].addEventListener)

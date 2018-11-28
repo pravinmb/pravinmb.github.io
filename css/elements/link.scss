@@ -1,0 +1,11 @@
+.link {
+	display: table;
+	text-decoration: none;
+	user-select: none;
+	margin: 8px 0;
+}
+
+.link > * {
+	display: table-cell;
+	vertical-align: middle;
+}
