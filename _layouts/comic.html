@@ -12,27 +12,28 @@ layout: default
 		<a id="copy" class="link" style="margin: 8px auto;" title="{{ site.url }}{{ page.url }}"><i class="material-icons">content_copy</i>&nbsp;Permalink</a>
 		<input id="copy_text" type="text" value="{{ site.url }}{{ page.url }}" readonly="readonly">
 	</div>
-	<div class="paginator">
-		{% assign first = site.comics | first %}
+	<div class="paginator">	
+		{% assign comics = site.comics | sort: "hash" %}
+		{% assign first = comics | first %}
 		<a class="paginator__icon{% if first.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ first.url }}">
 			<i class="material-icons">first_page</i>
 		</a>
-		{% assign previousNum = page.slug | minus: 1 %}
-		{% assign previous = site.comics | where: "slug", previousNum | first %}
+		{% assign previousNum = page.hash | minus: 2 %}
+		{% if previousNum >= 0 %}{% assign previous = comics[previousNum] %}{% endif %}
 		<a class="paginator__icon{% if previous %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ previous.url }}">
 			<i class="material-icons">navigate_before</i>
 		</a>
 
 
-		<span class="paginator__text">{{ page.slug }} of {{ site.comics.size }}</span>
+		<span class="paginator__text">{{ page.hash | plus: 0 }} of {{ site.comics.size }}</span>
 
-		{% assign nextNum = page.slug | plus: 1 %}
-		{% assign next = site.comics | where: "slug", nextNum | first %}
+		{% assign nextNum = page.hash | plus: 0 %}
+		{% assign next = comics[nextNum] %}
 		<a class="paginator__icon{% if next %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ next.url }}">
 			<i class="material-icons">navigate_next</i>
 		</a>
 
-		{% assign last = site.comics | last %}
+		{% assign last = comics | last %}
 		<a class="paginator__icon{% if last.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ last.url }}">
 			<i class="material-icons">last_page</i>
 		</a>
