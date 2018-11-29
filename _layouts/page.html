@@ -44,22 +44,49 @@ layout: default
 	var dialogComicElement = document.getElementById("comic_iframe");
 	var comics = document.getElementsByClassName("paper__item");
 
-	var f = function() {
+	// reset values on dialog close
+	var onClose = function() {
 		dialogElement.classList.add("dialog--hidden");
 		document.body.classList.remove("--dialog");
+		if (window.history.pushState)
+		    window.history.pushState('', '/', window.location.pathname);
+		else window.location.hash = '';
 	};
 
-	dialogCloseElement.addEventListener("click", f);
-	dialogElement.addEventListener("click", f);
+	dialogCloseElement.addEventListener("click", onClose);
+	dialogElement.addEventListener("click", onClose);
 
+	// apply listeners to comic classes; open dialog when clicked
 	for (var i in comics) {
 		if (!comics[i] || !comics[i].addEventListener)
 			continue;
-		
+
 		comics[i].addEventListener("click", function() {
 			dialogComicElement.src = "{{ site.url }}" + this.getAttribute("data-url");
 			dialogElement.classList.remove("dialog--hidden");
 			document.body.classList.add("--dialog");
+			window.location.hash = this.getAttribute("data-slug");
 		});
+	}
+
+	// change hash on dialog change (ex: pagination widget used)
+	var onLoad = function() {
+		let path = this.contentWindow.location.pathname.split("/");
+		console.log(path[2]);
+		if (path[1] === "comics" && !isNaN(path[2]) && parseInt(Number(path[2])) == path[2]) {
+			window.location.hash = path[2];
+			console.log(path[2]);
+		}
+	};	
+
+	dialogComicElement.addEventListener("load", onLoad);
+	dialogComicElement.onload = onLoad;
+
+	// load comic in dialog if hash is set
+	var hash = window.location.hash ? window.location.hash.substring(1) : null;
+	if (hash && !isNaN(hash) && parseInt(Number(hash)) == hash) {
+		dialogComicElement.src = "{{ site.url }}/comics/" + hash + "/";
+		dialogElement.classList.remove("dialog--hidden");
+		document.body.classList.add("--dialog");
 	}
 </script>

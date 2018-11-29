@@ -7,11 +7,6 @@ layout: default
 	<a class="img__container--wide" href="{{ site.url }}{{ page.image }}" target="_blank">
 		<img class="img--wide" src="{{ site.url }}{{ page.image }}">
 	</a>
-	<br>
-	<div style="text-align: center;">
-		<a id="copy" class="link" style="margin: 8px auto;" title="{{ site.url }}{{ page.url }}"><i class="material-icons">content_copy</i>&nbsp;Permalink</a>
-		<input id="copy_text" type="text" value="{{ site.url }}{{ page.url }}" readonly="readonly">
-	</div>
 	<div class="paginator">	
 		{% assign comics = site.comics | sort: "hash" %}
 		{% assign first = comics | first %}
@@ -41,11 +36,3 @@ layout: default
 	<br><br>
 	{% include comments.html %}
 </main>
-
-<script>
-	var textElement = document.getElementById("copy_text");
-	document.getElementById("copy").addEventListener("click", function() {
-		textElement.select();
-		document.execCommand("copy");
-	});
-</script>
