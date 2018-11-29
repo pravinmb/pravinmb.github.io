@@ -18,9 +18,28 @@
 
 .dialog__close {
 	position: absolute;
-	top: calc(10% + 24px);
-	right: 24px;
+	top: calc(10% + 16px);
+	right: 16px;
 	z-index: 2;
+	user-select: none;
+	padding: 16px;
+
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 50%;
+	transition: background-color .25s;
+}
+
+.dialog__close:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.dialog__close > .material-icons {
+	display: block;
+	transition: transform .25s;
+}
+
+.dialog__close:hover > .material-icons {
+	transform: rotate(90deg);
 }
 
 .dialog__content {
@@ -41,8 +60,8 @@
 	}
 
 	.dialog__close {
-		top: calc(4vw + 56px);
-		right: calc(10vw + 56px);
+		top: calc(4vw + 40px);
+		right: calc(10vw + 40px);
 	}
 
 	.dialog__content {
