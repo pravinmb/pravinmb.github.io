@@ -17,15 +17,15 @@ layout: page
 	{% assign comic = comics[num] %}
 	{% include comic.html comic=comic rowStart=5 rowEnd=7 colStart=1 colEnd=7 %}
 
-	{% assign num = num | plus: 1 %} <!-- 4. 6x2 layout -->
+	{% assign num = num | plus: 1 %} <!-- 4. 6x3 layout -->
 	{% assign comic = comics[num] %}
-	{% include comic.html comic=comic rowStart=7 rowEnd=9 colStart=1 colEnd=7 %}
+	{% include comic.html comic=comic rowStart=7 rowEnd=10 colStart=1 colEnd=7 %}
 
-	{% assign num = num | plus: 1 %} <!-- 5. 6x1 layout -->
-	{% assign comic = comics[num] %}
-	{% include comic.html comic=comic rowStart=9 rowEnd=10 colStart=1 colEnd=7 %}
-
-	{% assign num = num | plus: 1 %} <!-- 6. 2x7 layout -->
+	{% assign num = num | plus: 1 %} <!-- 5. 2x7 layout -->
 	{% assign comic = comics[num] %}
 	{% include comic.html comic=comic rowStart=3 rowEnd=11 colStart=7 colEnd=9 %}
+
+	{% assign num = num | plus: 1 %} <!-- 6. 8x2 layout -->
+	{% assign comic = comics[num] %}
+	{% include comic.html comic=comic rowStart=11 rowEnd=13 colStart=1 colEnd=9 %}
 </div>

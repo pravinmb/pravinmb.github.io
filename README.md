@@ -44,14 +44,14 @@ Each page has a `start` variable which defines the number of the first comic to 
 
 #### layout-1
 
-The first layout displays 6 comics on an 8x9 grid with the following width-height ratios:
+The first layout displays 6 comics on an 8x11 grid with the following width-height ratios:
 
   1. 8:2
   2. 6:2
   3. 6:2
-  4. 6:2
-  5. 6:1
-  6. 2:7
+  4. 6:3
+  5. 2:7
+  6. 8:2
 
 #### layout-2
 
