@@ -115,8 +115,8 @@ a:focus {
 
 main {
 	display: block;
-	margin-left: 10vw;
-	margin-right: 10vw;
+	margin-left: calc(20vw - 20px);
+	margin-right: calc(20vw - 20px);
 	margin-bottom: 2em;
 	
 	transition: transform .25s;

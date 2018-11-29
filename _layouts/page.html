@@ -72,11 +72,8 @@ layout: default
 	// change hash on dialog change (ex: pagination widget used)
 	var onLoad = function() {
 		let path = this.contentWindow.location.pathname.split("/");
-		console.log(path[2]);
-		if (path[1] === "comics" && !isNaN(path[2]) && parseInt(Number(path[2])) == path[2]) {
+		if (path[1] === "comics" && !isNaN(path[2]) && parseInt(Number(path[2])) == path[2])
 			window.location.hash = path[2];
-			console.log(path[2]);
-		}
 	};	
 
 	dialogComicElement.addEventListener("load", onLoad);
