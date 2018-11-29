@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="20"
@@ -17,7 +18,30 @@
    inkscape:version="0.92.2 2405546, 2018-03-11"
    sodipodi:docname="2x7_comic.svg">
   <defs
-     id="defs2" />
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient844">
+      <stop
+         style="stop-color:#00b4a9;stop-opacity:1"
+         offset="0"
+         id="stop840" />
+      <stop
+         style="stop-color:#00c7cb;stop-opacity:0.75355452"
+         offset="1"
+         id="stop842" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient844"
+       id="linearGradient846"
+       x1="0.82659614"
+       y1="282.77865"
+       x2="4.4650705"
+       y2="282.77865"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0564671,0,0,0.85431099,-0.14940255,40.602426)" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,9 +49,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="-18.126611"
-     inkscape:cy="32.034263"
+     inkscape:zoom="11.2"
+     inkscape:cx="-12.000253"
+     inkscape:cy="26.874071"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -48,7 +72,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,32 +82,73 @@
      id="layer1"
      transform="translate(0,-278.47917)">
     <rect
-       style="opacity:1;fill:none;fill-opacity:0.97156402;stroke:#000000;stroke-width:0.43825844;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815-35-7-9"
-       width="3.2659082"
-       height="3.265908"
-       x="1.0128793"
-       y="292.72122" />
-    <rect
-       style="opacity:1;fill:none;fill-opacity:0.97156402;stroke:#000000;stroke-width:0.43825844;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815-35-7-9-5"
-       width="3.2659085"
-       height="3.2659082"
-       x="1.0128793"
-       y="288.31149" />
-    <rect
-       style="opacity:1;fill:none;fill-opacity:0.97156402;stroke:#000000;stroke-width:0.43825844;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815-35-7-9-5-9"
-       width="3.2659087"
-       height="3.2659085"
-       x="1.0128793"
-       y="283.90176" />
-    <rect
-       style="opacity:1;fill:none;fill-opacity:0.97156402;stroke:#000000;stroke-width:0.43825844;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:url(#linearGradient846);fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect815-35-7-9-5-3"
-       width="3.2659087"
-       height="3.2659085"
-       x="1.0128793"
-       y="279.49203" />
+       width="3.7041667"
+       height="5.8208256"
+       x="0.79374999"
+       y="279.27292" />
+    <rect
+       style="opacity:1;fill:#700c1d;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect815-35-7-9-5-3-3"
+       width="3.7041667"
+       height="3.7041667"
+       x="0.79374999"
+       y="288.79791" />
+    <rect
+       style="opacity:1;fill:#1847be;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect815-35-7-9-5-3-6"
+       width="3.7041667"
+       height="3.7041667"
+       x="0.79374999"
+       y="292.50208" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:0.96263468px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.24065867"
+       x="2.3323987"
+       y="308.61069"
+       id="text850"
+       transform="scale(1.0994132,0.90957612)"><tspan
+         sodipodi:role="line"
+         x="2.3323987"
+         y="308.61069"
+         style="font-size:0.64175647px;line-height:0;text-align:center;text-anchor:middle;stroke-width:0.24065867"
+         id="tspan852">This</tspan><tspan
+         sodipodi:role="line"
+         x="2.3323987"
+         y="309.814"
+         style="font-size:0.64175647px;line-height:0;text-align:center;text-anchor:middle;stroke-width:0.24065867"
+         id="tspan856">is</tspan><tspan
+         sodipodi:role="line"
+         x="2.3323987"
+         y="311.01727"
+         style="font-size:0.64175647px;line-height:0;text-align:center;text-anchor:middle;stroke-width:0.24065867"
+         id="tspan858">a</tspan><tspan
+         sodipodi:role="line"
+         x="2.3323987"
+         y="312.22058"
+         style="font-size:0.64175647px;line-height:0;text-align:center;text-anchor:middle;stroke-width:0.24065867"
+         id="tspan860">Comic</tspan></text>
+    <rect
+       style="opacity:1;fill:#00ea58;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect815-35-7-9-5-3-3-7"
+       width="3.7041669"
+       height="3.7041667"
+       x="0.79374999"
+       y="285.09375" />
+    <ellipse
+       style="opacity:1;fill:#1847be;fill-opacity:1;stroke:#000000;stroke-width:0.12186544;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path879"
+       cx="2.6458335"
+       cy="286.94583"
+       rx="1.1297537"
+       ry="1.1296923" />
+    <rect
+       style="opacity:1;fill:#00ea58;fill-opacity:1;stroke:#000000;stroke-width:0.12812763;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect881"
+       width="1.7239556"
+       height="1.7239558"
+       x="1.7838554"
+       y="289.78802" />
   </g>
 </svg>
