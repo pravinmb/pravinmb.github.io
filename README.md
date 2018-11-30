@@ -73,3 +73,9 @@ The second layout displays 8 comics on an 8x6 grid with the following width-heig
 Pages and comics both have two variables that are used to identify them; the `slug` and the `hash`. The `slug` is used only to determine the URL of the comic, while the `hash` is used for sorting the comics internally (this is what the sequential layouts - described above - and pagination use). These variables _should_ both have the same numerical value in each comic, but the `hash` should have some amount of zeros prepended so that it is a uniform length. Currently, this length is 6 characters. Unless you plan to host more than 999999 comics, I think that this will be enough.
 
 Example: for comic #1, the `slug` would be "1", and the `hash` would be "000001".
+
+### Third-Party Stuff
+
+In the spirit of "not reinventing the wheel", this site uses a couple third-party files and libraries - mainly:
+
+- [FremyCompany/css-grid-polyfill](https://github.com/FremyCompany/css-grid-polyfill): A polyfill to add CSS grid compatibility to older browsers

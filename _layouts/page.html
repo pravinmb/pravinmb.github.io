@@ -45,7 +45,7 @@ layout: default
 	var comics = document.getElementsByClassName("paper__item");
 
 	// reset values on dialog close
-	var onClose = function() {
+	function onClose() {
 		dialogElement.classList.add("dialog--hidden");
 		document.body.classList.remove("--dialog");
 		if (window.history.pushState)
@@ -56,11 +56,16 @@ layout: default
 	dialogCloseElement.addEventListener("click", onClose);
 	dialogElement.addEventListener("click", onClose);
 
-	function onClick() {
-		dialogComicElement.src = "{{ site.url }}" + this.getAttribute("data-url");
+	function onClick(url, slug) {
+		if ((!url || !slug) && this && this.getAttribute) {
+			url = this.getAttribute("data-url");
+			slug = this.getAttribute("data-slug");
+		}
+	
+		dialogComicElement.src = "{{ site.url }}" + url;
 		dialogElement.classList.remove("dialog--hidden");
 		document.body.classList.add("--dialog");
-		window.location.hash = this.getAttribute("data-slug");
+		window.location.hash = slug;
 	}
 
 	// apply listeners to comic classes; open dialog when clicked
@@ -68,13 +73,15 @@ layout: default
 		if (!comics[i] || !comics[i].addEventListener)
 			continue;
 
+		const comic = comics[i];
+
 		comics[i].addEventListener("click", onClick);
 		comics[i].addEventListener("touchstart click", onClick);
 		comics[i].addEventListener("click tap", onClick);
 	}
 
 	// change hash on dialog change (ex: pagination widget used)
-	var onLoad = function() {
+	function onLoad() {
 		let path = this.contentWindow.location.pathname.split("/");
 		if (path[1] === "comics" && !isNaN(path[2]) && parseInt(Number(path[2])) == path[2])
 			window.location.hash = path[2];
