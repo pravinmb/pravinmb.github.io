@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="15.839192"
-     inkscape:cx="28.930607"
-     inkscape:cy="5.2760819"
+     inkscape:zoom="7.919596"
+     inkscape:cx="21.045558"
+     inkscape:cy="0.22531921"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -57,92 +57,96 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-291.70834)">
-    <rect
-       style="opacity:1;fill:#6f9297;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815-35-7-9-3"
-       width="4.7624989"
-       height="3.7041657"
-       x="0.79375052"
-       y="292.50211" />
-    <rect
-       style="opacity:1;fill:#00a8fd;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815-35-7-9-3-3"
-       width="4.7625012"
-       height="1.8520833"
-       x="5.5562496"
-       y="294.35422" />
-    <rect
-       style="opacity:1;fill:#d27a00;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815-35-7-9-3-3-9"
-       width="4.7625008"
-       height="1.8520833"
-       x="5.5562496"
-       y="292.50214" />
-    <rect
-       style="opacity:1;fill:#3ac94c;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815-35-7-9-3-0"
-       width="4.7624989"
-       height="3.7041657"
-       x="10.31875"
-       y="292.50211" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:0.70555556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="1.1417047"
-       y="293.6669"
-       id="text2739"><tspan
-         sodipodi:role="line"
-         id="tspan2737"
-         x="1.1417047"
+    <g
+       id="g2227"
+       transform="matrix(1.0639995,0,0,1.2391353,-0.50958769,-70.386224)">
+      <rect
+         y="292.50211"
+         x="0.79375052"
+         height="3.7041657"
+         width="4.7624989"
+         id="rect815-35-7-9-3"
+         style="opacity:1;fill:#6f9297;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="294.35422"
+         x="5.5562496"
+         height="1.8520833"
+         width="4.7625012"
+         id="rect815-35-7-9-3-3"
+         style="opacity:1;fill:#00a8fd;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="292.50214"
+         x="5.5562496"
+         height="1.8520833"
+         width="4.7625008"
+         id="rect815-35-7-9-3-3-9"
+         style="opacity:1;fill:#d27a00;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="292.50211"
+         x="10.31875"
+         height="3.7041657"
+         width="4.7624989"
+         id="rect815-35-7-9-3-0"
+         style="opacity:1;fill:#3ac94c;fill-opacity:1;stroke:#000000;stroke-width:0.13229167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text2739"
          y="293.6669"
-         style="font-size:0.70555556px;stroke-width:0.26458332">This comic</tspan><tspan
-         sodipodi:role="line"
          x="1.1417047"
-         y="294.54886"
-         style="font-size:0.70555556px;stroke-width:0.26458332"
-         id="tspan2741">may be</tspan><tspan
-         sodipodi:role="line"
-         x="1.1417047"
-         y="295.43079"
-         style="font-size:0.70555556px;stroke-width:0.26458332"
-         id="tspan2743">rectangular</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:1.05833328px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="7.0228271"
-       y="293.82272"
-       id="text2747"><tspan
-         sodipodi:role="line"
-         id="tspan2745"
-         x="7.0228271"
+         style="font-style:normal;font-weight:normal;font-size:0.70555556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-size:0.70555556px;stroke-width:0.26458332"
+           y="293.6669"
+           x="1.1417047"
+           id="tspan2737"
+           sodipodi:role="line">This comic</tspan><tspan
+           id="tspan2741"
+           style="font-size:0.70555556px;stroke-width:0.26458332"
+           y="294.54886"
+           x="1.1417047"
+           sodipodi:role="line">may be</tspan><tspan
+           id="tspan2743"
+           style="font-size:0.70555556px;stroke-width:0.26458332"
+           y="295.43079"
+           x="1.1417047"
+           sodipodi:role="line">rectangular</tspan></text>
+      <text
+         id="text2747"
          y="293.82272"
-         style="stroke-width:0.26458332">but</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:0.70555556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="6.799068"
-       y="295.68051"
-       id="text2751"><tspan
-         sodipodi:role="line"
-         id="tspan2749"
-         x="6.799068"
+         x="7.0228271"
+         style="font-style:normal;font-weight:normal;font-size:1.05833328px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="293.82272"
+           x="7.0228271"
+           id="tspan2745"
+           sodipodi:role="line">but</tspan></text>
+      <text
+         id="text2751"
          y="295.68051"
-         style="stroke-width:0.26458332">I think</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:0.70555556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="11.497059"
-       y="294.10785"
-       id="text2755"><tspan
-         sodipodi:role="line"
-         x="11.497059"
+         x="6.799068"
+         style="font-style:normal;font-weight:normal;font-size:0.70555556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.26458332"
+           y="295.68051"
+           x="6.799068"
+           id="tspan2749"
+           sodipodi:role="line">I think</tspan></text>
+      <text
+         id="text2755"
          y="294.10785"
-         style="stroke-width:0.26458332"
-         id="tspan2757">it isn't</tspan><tspan
-         sodipodi:role="line"
          x="11.497059"
-         y="294.98981"
-         style="stroke-width:0.26458332"
-         id="tspan2761">square</tspan></text>
+         style="font-style:normal;font-weight:normal;font-size:0.70555556px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           id="tspan2757"
+           style="stroke-width:0.26458332"
+           y="294.10785"
+           x="11.497059"
+           sodipodi:role="line">it isn't</tspan><tspan
+           id="tspan2761"
+           style="stroke-width:0.26458332"
+           y="294.98981"
+           x="11.497059"
+           sodipodi:role="line">square</tspan></text>
+    </g>
   </g>
 </svg>
