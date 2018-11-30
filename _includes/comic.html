@@ -1,3 +1,3 @@
-<a class="paper__item" style="{% if include.rowStart %}grid-row-start: {{ include.rowStart }};{% endif %}{% if include.rowEnd %}grid-row-end: {{ include.rowEnd }};{% endif %}{% if include.colStart %}grid-column-start: {{ include.colStart }};{% endif %}{% if include.colEnd %}grid-column-end: {{ include.colEnd }};{% endif %}" data-url="{{ include.comic.url }}" data-slug="{{ include.comic.slug }}" onclick="onClick">
+<a class="paper__item" style="{% if include.rowStart %}grid-row-start: {{ include.rowStart }};{% endif %}{% if include.rowEnd %}grid-row-end: {{ include.rowEnd }};{% endif %}{% if include.colStart %}grid-column-start: {{ include.colStart }};{% endif %}{% if include.colEnd %}grid-column-end: {{ include.colEnd }};{% endif %}" data-url="{{ include.comic.url }}" data-slug="{{ include.comic.slug }}" onclick="onClick();">
 	<img class="img paper__item__image" src="{{ site.url }}{{ include.comic.image }}">
 </a>
