@@ -7,7 +7,7 @@
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.25);
 	opacity: 1;
-	transition: opacity .25s;
+	transition: opacity .25s, display 0s .25s, visibility 0s .25s;
 }
 
 .dialog--hidden {
@@ -15,7 +15,7 @@
 	display: none;
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity .25s, display 0s .25s, visibility 0s .25s;
+	transition: opacity .25s;
 }
 
 .dialog__close {
@@ -54,6 +54,24 @@
 	height: 90%;
 	background-color: #FFF;
 	border-radius: 8px;
+	animation-name: dialog;
+	animation-duration: .25s;
+	animation-timing-function: ease-out;
+}
+
+.dialog--hidden > .dialog__content {
+	animation-direction: reverse;
+}
+
+@keyframes dialog {
+	from {
+		opacity: 0;
+		transform: translateY(20vh);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @media(min-width: 1000px) {
@@ -71,5 +89,16 @@
 		height: 100%;
 		border-radius: 8px;
 		box-shadow: 0 0.4em 3.2em rgba(0, 0, 0, 0.33);
+	}
+
+	@keyframes dialog {
+		from {
+			opacity: 0;
+			transform: scale(.75);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 }
