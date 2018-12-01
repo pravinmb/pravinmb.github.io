@@ -56,11 +56,14 @@ layout: default
 	dialogCloseElement.addEventListener("click", onClose);
 	dialogElement.addEventListener("click", onClose);
 
-	function onClick(url, slug) {
+	function onClick(e, url, slug) {
 		if ((!url || !slug) && this && this.getAttribute) {
 			url = this.getAttribute("data-url");
 			slug = this.getAttribute("data-slug");
 		}
+
+		if (url && slug)
+			e.preventDefault();
 	
 		dialogComicElement.src = "{{ site.url }}" + url;
 		dialogElement.classList.remove("dialog--hidden");

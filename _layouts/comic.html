@@ -3,7 +3,7 @@ layout: default
 ---
 
 <main>
-	<h3 class="title">{{ page.title }}</h3>
+	<h3 class="title --content">{{ page.title }}</h3>
 	<a class="img__container--wide" href="{{ site.url }}{{ page.image }}" target="_blank">
 		<img class="img--wide" src="{{ site.url }}{{ page.image }}">
 	</a>
@@ -34,7 +34,9 @@ layout: default
 		</a>
 	</div>
 	<br>
-	{{ content }}
+	<div class="--content">
+		{{ content }}
+	</div>
 	<br>
 	{% include comments.html %}
 </main>
