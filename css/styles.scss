@@ -125,6 +125,6 @@ main {
 }
 
 .--content {
-	margin-left: 10vw;
-	margin-right: 10vw;
+	margin-left: calc(5vw + 10px);
+	margin-right: calc(5vw + 10px);
 }
