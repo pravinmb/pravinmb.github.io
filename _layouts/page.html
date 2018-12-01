@@ -62,7 +62,9 @@ layout: default
 			slug = this.getAttribute("data-slug");
 		}
 
-		event = event || window.event;
+		if (!event || !event.preventDefault)
+			event = window.event;
+		
 		if (url && slug && event)
 			event.preventDefault();
 	
