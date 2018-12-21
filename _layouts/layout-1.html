@@ -23,9 +23,9 @@ layout: page
 
 	{% assign num = num | plus: 1 %} <!-- 5. 2x7 layout -->
 	{% assign comic = comics[num] %}
-	{% include comic.html comic=comic rowStart=3 rowEnd=11 colStart=7 colEnd=9 %}
+	{% include comic.html comic=comic rowStart=3 rowEnd=10 colStart=7 colEnd=9 %}
 
 	{% assign num = num | plus: 1 %} <!-- 6. 8x2 layout -->
 	{% assign comic = comics[num] %}
-	{% include comic.html comic=comic rowStart=11 rowEnd=13 colStart=1 colEnd=9 %}
+	{% include comic.html comic=comic rowStart=10 rowEnd=12 colStart=1 colEnd=9 %}
 </div>
