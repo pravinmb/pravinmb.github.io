@@ -14,3 +14,25 @@
   width: 100%;
   height: auto;
 }
+
+@media(min-width: 1000px) {
+  .comic {
+    display: block;
+    height: 300px;
+    font-size: 0;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  .comic__panel {
+    display: inline;
+    height: 100%;
+    width: auto;
+  }
+
+  .comic__panel__img {
+    display: inline;
+    height: 100%;
+    width: auto;
+  }
+}
