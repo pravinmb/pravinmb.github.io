@@ -1,3 +1,9 @@
-<a class="paper__item" style="{% if include.rowStart %}grid-row-start: {{ include.rowStart }};{% endif %}{% if include.rowEnd %}grid-row-end: {{ include.rowEnd }};{% endif %}{% if include.colStart %}grid-column-start: {{ include.colStart }};{% endif %}{% if include.colEnd %}grid-column-end: {{ include.colEnd }};{% endif %}" data-url="{{ include.comic.url }}" data-slug="{{ include.comic.slug }}" onclick="onClick(this, '{{ include.comic.url }}', '{{ include.comic.slug }}');" href="{{ site.url }}{{ include.comic.url }}">
-	<img class="img paper__item__image" src="{{ site.url }}{{ include.comic.image }}">
+<a class="paper__item" style="grid-area: {{ include.rowStart }} / {{ include.colStart }} / {{ include.rowEnd }} / {{ include.colEnd }};" data-url="{{ include.comic.url }}" data-slug="{{ include.comic.slug }}" onclick="onClick(this, '{{ include.comic.url }}', '{{ include.comic.slug }}');" href="{{ site.url }}{{ include.comic.url }}">
+	<div class="paper__item__container">
+		<div class="paper__item__images">
+			{% for image in include.comic.images %}
+			<img class="img paper__item__images__image" src="{{ site.url }}{{ image }}">
+			{% endfor %}
+		</div>
+	</div>
 </a>
