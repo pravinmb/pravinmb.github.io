@@ -4,9 +4,13 @@ layout: default
 
 <main>
 	<h3 class="title --content">{{ page.title }}</h3>
-	<a class="img__container--wide" href="{{ site.url }}{{ page.image }}" target="_blank">
-		<img class="img--wide" src="{{ site.url }}{{ page.image }}">
-	</a>
+	<div class="comic comic--large --content">
+		{% for image in page.images %}
+		<a class="comic__panel" href="{{ site.url }}{{ image }}" target="_blank">
+			<img class="comic__panel__img" src="{{ site.url }}{{ image }}">
+		</a>
+		{% endfor %}
+	</div>
 	<div class="paginator">	
 		{% assign comics = site.comics | sort: "hash" %}
 		{% assign first = comics | first %}
