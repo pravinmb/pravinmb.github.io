@@ -4,10 +4,10 @@ layout: default
 
 <main>
 	<h3 class="title --content">{{ page.title }}</h3>
-	<div class="comic comic--large --content">
+	<div class="comic--wide --content">
 		{% for image in page.images %}
-		<a class="comic__panel" href="{{ site.url }}{{ image }}" target="_blank">
-			<img class="comic__panel__img" src="{{ site.url }}{{ image }}">
+		<a class="comic--wide__panel" href="{{ site.url }}{{ image }}" target="_blank">
+			<img class="comic--wide__panel__img" src="{{ site.url }}{{ image }}">
 		</a>
 		{% endfor %}
 	</div>
