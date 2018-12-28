@@ -22,6 +22,9 @@ Logging the hours I spend on this here. Will update daily. The "commits" column 
 | 12/12 | 7:50-8:20 | 30m | Starbucks meeting | |
 | 12/20 | 15:30-16:00 | 30m | | |
 | 12/21 | 13:15-14:30 | 1h15 | | fb89176 - eaeb420 |
+| 12/28 | 16:30-17:00 | 30m | | 1d80175 |
+
+Total: 13h
 
 ## TODO
 
