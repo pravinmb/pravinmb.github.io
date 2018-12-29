@@ -6,32 +6,9 @@ layout: default
 
 <main>
 	{{ content }}
-	
-	<div class="paginator">
-		{% assign pages = site.pages | sort: "hash" %}
-	
-		{% assign first = pages | first %}
-		<a class="paginator__icon{% if first.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ first.url }}" title="Jump to First">
-			<i class="material-icons">first_page</i>
-		</a>
-		{% assign previousNum = page.hash | minus: 2 %}
-		{% if previousNum >= 0 %}{% assign previous = pages[previousNum] %}{% endif %}
-		<a class="paginator__icon{% if previous %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ previous.url }}" title="Previous" >
-			<i class="material-icons">navigate_before</i>
-		</a>
 
-		<span class="paginator__text">{{ page.hash | plus: 0 }} of {{ site.pages.size }}</span>
-		
-		{% assign nextNum = page.hash | plus: 0 %}
-		{% assign next = pages[nextNum] %}
-		<a class="paginator__icon{% if next %}{% else %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ next.url }}" title="Next">
-			<i class="material-icons">navigate_next</i>
-		</a>
-		{% assign last = pages | last %}
-		<a class="paginator__icon{% if last.url == page.url %} paginator__icon--disabled{% endif %}" href="{{ site.url }}{{ last.url }}" title="Jump to Last">
-			<i class="material-icons">last_page</i>
-		</a>
-	</div>
+	{% include paginator.html pages=site.pages hash=page.hash %}
+
 	<div id="comic_dialog" class="dialog dialog--hidden">
 		<a id="comic_close" class="dialog__close"><i class="material-icons">close</i></a>
 		<div class="dialog__content iframe__container">
