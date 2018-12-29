@@ -1,7 +1,8 @@
 .banner {
 	display: block;
 	margin: 0;
-	padding: 1em;
+	margin-top: .5em;
+	padding: .5em 1em;
 	color: #000;
 	text-decoration: none;
 }
@@ -17,4 +18,10 @@
 .banner__icon {
 	height: 2em;
 	width: auto;
+}
+
+@media(min-width: 1000px) {
+	.banner {
+		padding: 1em;
+	}
 }
