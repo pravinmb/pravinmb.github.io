@@ -6,18 +6,22 @@ layout: default
 
 <main>
 	{{ content }}
-
-	{% include paginator.html pages=site.pages hash=page.hash %}
-
-	<div id="comic_dialog" class="dialog dialog--hidden">
-		<a id="comic_close" class="dialog__close"><i class="material-icons">close</i></a>
-		<div class="dialog__content iframe__container">
-			<iframe id="comic_iframe"></iframe>
-		</div>
-	</div>
 </main>
 
-<script>
+<footer class="footer">
+	{% include paginator.html pages=site.pages hash=page.hash %}
+</footer>
+
+<div id="comic_dialog" class="dialog dialog--hidden">
+	<a id="comic_close" class="dialog__close"><i class="material-icons">close</i></a>
+	<div class="dialog__content iframe__container">
+		<iframe id="comic_iframe"></iframe>
+	</div>
+</div>
+
+<script type="text/javascript">
+	{% include footer.js %}
+
 	var dialogElement = document.getElementById("comic_dialog");
 	var dialogCloseElement = document.getElementById("comic_close");
 	var dialogComicElement = document.getElementById("comic_iframe");
