@@ -42,42 +42,24 @@ The site is built in Jekyll. You'll want to setup Ruby on your machine, then cd 
 
 ### Page Structure
 
-The index file, "/", always redirects to the latest "page", or set of comics. Pages have a url equivalent to their `:title` parameter, which should start at 1 and increment each time a new page is added.
+The index file, "/", always redirects to the latest "page", or set of comics. Pages have a url equivalent to their `:slug` parameter, which should start at 1 and increment each time a new page is added.
 
 Comics are handled similarly; each new comic increments an integer, except they are located in the `/comics/` subdirectory. If the page at `/1` contains 40 comics, then the url for the first comic of page 2 should be `/comics/41`.
 
 ### Layouts
 
-Each "page" of comics has a "layout", which is one of `_layouts/layout-*.html`. This layout determines how many comics it needs and how/where they will be displayed in the grid.
+Each "page" of comics has a "grid" attribute which tells it which predefined set of positions it should place the comics in. The page layout (`_layouts/page.html`) then determines how many comics it needs and adds them to the grid using the comic include (`_includes/comic.html`).
 
 Each page has a `start` variable which defines the number of the first comic to be used in the layout; the rest are obtained in sequential order.
-
-#### layout-1
-
-The first layout displays 6 comics on an 8x11 grid with the following width-height ratios:
-
-  1. 8:2
-  2. 6:2
-  3. 6:2
-  4. 6:3
-  5. 2:7
-  6. 8:2
-
-#### layout-2
-
-The second layout displays 8 comics on an 8x6 grid with the following width-height ratios:
-
-  1. 5:2
-  2. 3:1
-  3. 3:1
-  4. 3:1
-  5. 5:1
-  6. 5:1
-  7. 3:1
-  8. 8:2
 
 ### Identifiers
 
 Pages and comics both have two variables that are used to identify them; the `slug` and the `hash`. The `slug` is used only to determine the URL of the comic, while the `hash` is used for sorting the comics internally (this is what the sequential layouts - described above - and pagination use). These variables _should_ both have the same numerical value in each comic, but the `hash` should have some amount of zeros prepended so that it is a uniform length. Currently, this length is 6 characters. Unless you plan to host more than 999999 comics, I think that this will be enough.
 
 Example: for comic #1, the `slug` would be "1", and the `hash` would be "000001".
+
+These identifiers are used in many places throughout the site, but their main purpose is to satiate the paginator element, located at `_includes/paginator.html`.
+
+### CSS
+
+This site has a lot of CSS. However, it is split into separate files (using SCSS) with a strict naming convention ([Block Element Modifier](http://getbem.com/naming/)) to make it easier to manage. 
