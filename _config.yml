@@ -11,6 +11,40 @@ collections:
         output: true
         permalink: :slug/
 
+positions:
+  - - rowStart: 1
+      colStart: 1
+      rowEnd: 3
+      colEnd: 9
+    - rowStart: 3
+      colStart: 1
+      rowEnd: 5
+      colEnd: 7
+    - rowStart: 5
+      colStart: 1
+      rowEnd: 7
+      colEnd: 7
+    - rowStart: 7
+      colStart: 1
+      rowEnd: 10
+      colEnd: 7
+    - rowStart: 3
+      colStart: 7
+      rowEnd: 10
+      colEnd: 9
+    - rowStart: 10
+      colStart: 1
+      rowEnd: 12
+      colEnd: 9
+    - rowStart: 12
+      colStart: 1
+      rowEnd: 14
+      colEnd: 5
+    - rowStart: 12
+      colStart: 5
+      rowEnd: 14
+      colEnd: 9
+
 exclude:
   - Gemfile
   - Gemfile.lock

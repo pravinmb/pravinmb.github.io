@@ -2,6 +2,7 @@
 	display: grid;
 	grid-auto-flow: dense;
 	grid-auto-rows: 10vw;
+	grid-auto-columns: 1fr;
 }
 
 .paper__item {
