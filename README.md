@@ -26,8 +26,9 @@ Logging the hours I spend on this here. Will update daily. The "commits" column 
 | 12/29 | 16:00-16:20 | 20m | | d37cd7b - d42e391 |
 | 12/29 | 17:40-17:50 | 10m | | d613c2f - 02ad65f |
 | 12/29 | 21:20-21:35 | 15m | | 1932944 - 9470756 |
+| 1/5   | 19:45-20:10 | 25m | | 62b7587 |
 
-Total: 13h45
+Total: 14h10
 
 ## TODO
 
