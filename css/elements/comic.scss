@@ -30,13 +30,17 @@
 }
 
 .comic__images__image {
-  display: inline;
+  display: none;
   max-width: 55.55%;
   max-height: 100%;
 }
 
+.comic__images__image:first-child {
+	display: inline;
+}
+
 .comic__prompt {
-  display: block;
+  display: none;
   width: 50vw;
   height: 50vw;
   position: absolute;
@@ -74,6 +78,14 @@
 }
 
 @media(min-width: 1000px) {
+  .comic__images__image {
+    display: inline;
+  }
+
+  .comic__prompt {
+  	display: block;
+  }
+
   .comic--wide {
     display: block;
     height: 300px;
