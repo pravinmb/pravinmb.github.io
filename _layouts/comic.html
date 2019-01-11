@@ -6,9 +6,9 @@ layout: default
 	<h3 class="title --content">{{ page.title }}</h3>
 	<div class="comic--wide --content">
 		{% for image in page.images %}
-		<a class="comic--wide__panel" href="{{ site.url }}{{ image }}" target="_blank">
+		<div class="comic--wide__panel">
 			<img class="comic--wide__panel__img" src="{{ site.url }}{{ image }}">
-		</a>
+		</div>
 		{% endfor %}
 	</div>
 
