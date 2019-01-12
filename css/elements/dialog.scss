@@ -20,12 +20,12 @@
 
 .dialog__close {
 	position: absolute;
-	top: calc(5% - 28px);
+	top: calc(5% - 24px);
 	right: 16px;
 	z-index: 2;
 	user-select: none;
-	width: 56px;
-	height: 56px;
+	width: 48px;
+	height: 48px;
 
 	background-color: #FFFFFF;
 	border-radius: 50%;
@@ -87,7 +87,7 @@
 
 	.dialog__close {
 		top: calc(4vw + 40px);
-		right: calc(10vw - 56px);
+		right: calc(10vw - 48px);
 	}
 
 	.dialog__content {

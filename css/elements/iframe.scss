@@ -4,7 +4,8 @@ iframe {
 
 .iframe__container {
 	-webkit-overflow-scrolling: touch;
-	overflow-y: scroll;
+	overflow-y: auto;
+	font-size: 0;
 }
 
 .iframe__container > iframe {
