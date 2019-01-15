@@ -58,7 +58,7 @@
 	});
 
 	window.onscroll = function(e) {
-		var scrollingElement = (e && e.target) || getScrollingElement();
+		var scrollingElement = e && e.target && e.target.scrollHeight > 0 ? e.target : getScrollingElement();
 		console.log("Scroll! ", scrollingElement);
 		if (scrollingElement) {
 			var scrollingHeight = scrollingElement.scrollHeight || scrollingElement.offsetHeight;
