@@ -59,6 +59,7 @@
 
 	window.onscroll = function(e) {
 		var scrollingElement = (e && e.target) || getScrollingElement();
+		console.log("Scroll! ", scrollingElement);
 		if (scrollingElement) {
 			var scrollingHeight = scrollingElement.scrollHeight || scrollingElement.offsetHeight;
 			if (scrollingHeight - scrollingElement.scrollTop > 2 * getWindowHeight()) {
