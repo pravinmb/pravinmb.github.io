@@ -57,6 +57,12 @@ body {
 	-webkit-transition: background-color .25s;
 }
 
+html, body {
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
 body.--dialog {
 	overflow: hidden;
 }

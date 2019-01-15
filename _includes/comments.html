@@ -19,6 +19,25 @@
 	<i class="snackbar__icon material-icons">arrow_drop_down</i>
 </button>
 <script>
+	var scrollingElements = [
+		document.getElementsByClassName("iframe__container")[0], 
+		document.scrollingElement,
+		document.body,
+		document.documentElement,
+		document.getElementsByTagName("html")[0]
+	];
+
+	function getWindowHeight() {
+		return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	}
+
+	function getScrollingElement() {
+		for (var i = 0; i < scrollingElements.length; i++) {
+			if (scrollingElements[i] && scrollingElements[i].scrollHeight > getWindowHeight())
+				return scrollingElements[i];
+		}
+	}
+
 	var scrollCommentsElement = document.getElementById("comments-scroll");
 	scrollCommentsElement.addEventListener("click", function() {
 		var scrollingElement = document.scrollingElement || document.body;
@@ -26,11 +45,10 @@
 	});
 
 	window.onscroll = function() {
-		var scrollingElement = document.scrollingElement || document.body;
+		var scrollingElement = getScrollingElement();
 		if (scrollingElement) {
 			var scrollingHeight = scrollingElement.scrollHeight || scrollingElement.offsetHeight;
-			var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-			if (scrollingHeight - scrollingElement.scrollTop - windowHeight > windowHeight) {
+			if (scrollingHeight - scrollingElement.scrollTop > 2 * getWindowHeight()) {
 				scrollCommentsElement.setAttribute("active", true);
 				return;
 			}
@@ -38,6 +56,13 @@
 
 		scrollCommentsElement.removeAttribute("active");
 	};
+
+	for (var i = 0; i < scrollingElements.length; i++) {
+		if (scrollingElements[i]) {
+			scrollingElements[i].onscroll = window.onscroll;
+			scrollingElements[i].addEventListener("scroll", window.onscroll);
+		}
+	}
 
 	window.onscroll();
 </script>
