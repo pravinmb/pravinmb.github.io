@@ -36,6 +36,19 @@
 			if (scrollingElements[i] && scrollingElements[i].scrollHeight > getWindowHeight())
 				return scrollingElements[i];
 		}
+
+		var scrollingElement = scrollingElements[0];
+		for (var i = 1; i < scrollingElements.length; i++) {
+			if (scrollingElement) {
+				if (scrollingElement.scrollTop > 0)
+					return scrollingElement;
+				
+				if (scrollingElements[i].scrollHeight > scrollingElement.scrollHeight)
+					scrollingElement = scrollingElements[i];
+			} else scrollingElement = scrollingElements[i];
+		}
+
+		return scrollingElement;
 	}
 
 	var scrollCommentsElement = document.getElementById("comments-scroll");
