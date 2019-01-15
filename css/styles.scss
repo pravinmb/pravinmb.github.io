@@ -108,6 +108,7 @@ a:focus {
 @import "elements/img.scss";
 @import "elements/iframe.scss";
 @import "elements/banner.scss";
+@import "elements/snackbar.scss";
 @import "elements/comic.scss";
 @import "elements/dialog.scss";
 @import "elements/paper.scss";
@@ -128,4 +129,8 @@ main {
 .--content {
 	margin-left: calc(5vw + 10px);
 	margin-right: calc(5vw + 10px);
+}
+
+html {
+	scroll-behavior: smooth;
 }
