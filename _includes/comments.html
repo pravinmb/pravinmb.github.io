@@ -24,7 +24,8 @@
 		document.scrollingElement,
 		document.body,
 		document.documentElement,
-		document.getElementsByTagName("html")[0]
+		document.getElementsByTagName("html")[0],
+		document.getElementsByTagName("main")[0]
 	];
 
 	function getWindowHeight() {
@@ -53,8 +54,12 @@
 
 	var scrollCommentsElement = document.getElementById("comments-scroll");
 	scrollCommentsElement.addEventListener("click", function() {
-		var scrollingElement = document.scrollingElement || document.body;
-		scrollingElement.scrollTop = scrollingElement.scrollHeight;
+		var scrollingElement = getScrollingElement();
+		if (scrollingElement)
+			scrollingElement.scrollTop = scrollingElement.scrollHeight;
+
+		document.location.hash = "disqus_thread";
+		document.getElementById("disqus_thread").scrollIntoView();
 	});
 
 	window.onscroll = function(e) {
