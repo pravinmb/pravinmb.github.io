@@ -39,6 +39,7 @@ layout: default
 
 	// reset values on dialog close
 	function onClose() {
+		dialogComicElement.src = "about:blank";
 		dialogElement.classList.add("dialog--hidden");
 		document.body.classList.remove("--dialog");
 		if (window.history.pushState)
