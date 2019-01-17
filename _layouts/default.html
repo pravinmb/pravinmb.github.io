@@ -6,6 +6,11 @@
 </head>
 <body>
 	{{ content }}
+	<script>
+		if (navigator.vendor.match(/apple/i)) {
+			document.body.setAttribute("webkit", true);
+		}
+	</script>
 </body>
 </html>
 	

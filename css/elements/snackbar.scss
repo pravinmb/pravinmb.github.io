@@ -21,6 +21,10 @@
 	transition: visibility 0.25s, transform 0.25s;
 }
 
+.snackbar[webkit] {
+	display: none;
+}
+
 .snackbar[active] {
 	visibility: visible;
 	transform: translateY(0);

@@ -131,7 +131,7 @@ main {
 	margin-right: calc(5vw + 10px);
 }
 
-main.--frame {
+body[webkit] > main.--frame {
 	margin: 0;
 	padding: 0 2vw;
 	
