@@ -131,8 +131,18 @@ main {
 	margin-right: calc(5vw + 10px);
 }
 
-html {
-	scroll-behavior: smooth;
+main.--frame {
+	margin: 0;
+	padding: 0 2vw;
+	
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	z-index: 2;
 }
 
 .--desktop {
