@@ -1,7 +1,17 @@
 .footer {
-	margin-left: 2vw;
-	margin-right: 2vw;
+	clear: both;
+	padding-left: 2vw;
+	padding-right: 2vw;
 	bottom: 0;
 	left: 0;
 	right: 0;
+
+	background: #FFFFFF;
+	background: var(--normal-background);
+}
+
+.footer[fixed] {
+	position: fixed;
+	border-top: 1px solid #BDBDBD;
+	border-top: 1px solid var(--normal-outline);
 }
