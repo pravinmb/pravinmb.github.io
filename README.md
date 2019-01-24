@@ -31,8 +31,10 @@ Logging the hours I spend on this here. Will update daily. The "commits" column 
 | 1/11  | 11:00-11:30 | 30m | | 89eb9c8 - 987f1e0 |
 | 1/12  | 11:30-11:45 | 15m | | f683c64 |
 | 1/15  | 11:50-00:30 | 40m | | 23d7678 |
+| 1/17  | 10:00-10:40 | 40m | | 4ad9ce3 - 4e3808a |
+| 1/17  | 20:00-22:00 | 1h  | Starbucks meeting | |
 
-Total: 16h35
+Total: 18h15
 
 ## TODO
 
@@ -40,7 +42,7 @@ Total: 16h35
 - [ ] create more newspaper-like layouts
 - [ ] design polish, animations, transitions, etc
 - [ ] ensure compatibility with other browsers
-- [ ] content management system - siteleaf.com?
+- [x] content management system - forestry.io
 
 ## Building
 
