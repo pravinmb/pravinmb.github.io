@@ -6,10 +6,10 @@ baseurl: "/"
 collections:
     comics:
         output: true
-        permalink: comics/:slug/
+        permalink: comics/:name/
     pages:
         output: true
-        permalink: :slug/
+        permalink: :name/
 
 positions:
   - - rowStart: 1
