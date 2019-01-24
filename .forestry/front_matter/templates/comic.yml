@@ -1,0 +1,44 @@
+---
+label: Comic
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  description: Don't change this.
+  hidden: true
+  config:
+    required: true
+  default: comic
+- type: text
+  name: title
+  label: Comic Name
+  description: The name of the comic used for the window title, accessibility/screen
+    readers, etc.
+  config:
+    required: true
+  default: Untitled Comic
+- type: image_gallery
+  name: images
+  label: Comic Panels
+  description: The images to display as panels in the comic.
+- type: text
+  name: categories
+  label: Comic Number
+  description: The "number" of the comic, e.g. "the 11th comic added to the site".
+    Used to identify the comic.
+  config:
+    required: true
+  default: '1'
+- type: text
+  name: hash
+  label: Comic Hash
+  description: The "number" of the comic again, but this time with leading zeroes
+    to make it 6 characters long. Used to sort/order comics.
+  config:
+    required: true
+  default: '000001'
+pages:
+- _comics/3.md
+- _comics/9.md
