@@ -24,7 +24,7 @@ fields:
   label: Comic Panels
   description: The images to display as panels in the comic.
 - type: text
-  name: categories
+  name: slug
   label: Comic Number
   description: The "number" of the comic, e.g. "the 11th comic added to the site".
     Used to identify the comic.
