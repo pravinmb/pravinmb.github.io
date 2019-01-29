@@ -12,6 +12,10 @@
 
 .link--comic {
 	padding: 0 2vw;
-	float: right;
 	margin-bottom: 1.5em;
+	text-align: center;
+}
+
+.link--comic > * {
+	display: inline;
 }
