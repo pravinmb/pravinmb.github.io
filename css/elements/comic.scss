@@ -47,6 +47,7 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #FFF);
+  background: linear-gradient(135deg, var(--normal-background-alpha), var(--normal-background-alpha), var(--normal-background));
 }
 
 .comic__prompt__text {
@@ -58,6 +59,7 @@
   font-size: 2vw;
   font-weight: bolder;
   color: #000;
+  color: var(--normal-color-focus);
 }
 
 .comic__prompt__text > i.material-icons {

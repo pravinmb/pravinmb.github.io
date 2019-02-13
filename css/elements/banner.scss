@@ -18,6 +18,13 @@
 .banner__icon {
 	height: 2em;
 	width: auto;
+	filter: contrast(0) brightness(0);
+	filter: contrast(0) brightness(var(--image-brightness-focus));
+}
+
+.banner__name {
+    color: #000;
+    color: var(--normal-color-focus);
 }
 
 @media(min-width: 1000px) {
