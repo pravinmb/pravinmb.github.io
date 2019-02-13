@@ -44,6 +44,46 @@ positions:
       colStart: 5
       rowEnd: 14
       colEnd: 9
+  - - rowStart: 1
+      colStart: 1
+      rowEnd: 5
+      colEnd: 4
+    - rowStart: 1
+      colStart: 4
+      rowEnd: 3
+      colEnd: 9
+    - rowStart: 3
+      colStart: 4
+      rowEnd: 5
+      colEnd: 9
+    - rowStart: 5
+      colStart: 1
+      rowEnd: 7
+      colEnd: 9
+    - rowStart: 7
+      colStart: 1
+      rowEnd: 9
+      colEnd: 5
+    - rowStart: 7
+      colStart: 5
+      rowEnd: 9
+      colEnd: 9
+    - rowStart: 9
+      colStart: 1
+      rowEnd: 11
+      colEnd: 9
+    - rowStart: 11
+      colStart: 1
+      rowEnd: 13
+      colEnd: 6
+    - rowStart: 13
+      colStart: 1
+      rowEnd: 15
+      colEnd: 6
+    - rowStart: 11
+      colStart: 6
+      rowEnd: 15
+      colEnd: 9
 
 exclude:
   - Gemfile
