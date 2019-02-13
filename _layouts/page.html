@@ -18,11 +18,11 @@ layout: default
 	</div>
 </main>
 
-{% include theme-switch.html %}
-
 <footer class="footer">
 	{% include paginator.html pages=site.pages hash=page.hash %}
 </footer>
+
+{% include theme-switch.html %}
 
 <div id="comic_dialog" class="dialog dialog--hidden">
 	<a id="comic_close" class="dialog__close"><i class="material-icons">close</i></a>
