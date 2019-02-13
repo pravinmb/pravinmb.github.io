@@ -33,8 +33,10 @@ Logging the hours I spend on this here. Will update daily. The "commits" column 
 | 1/15  | 11:50-00:30 | 40m | | 23d7678 |
 | 1/17  | 10:00-10:40 | 40m | | 4ad9ce3 - 4e3808a |
 | 1/17  | 20:00-22:00 | 1h  | Starbucks meeting | |
+| 1/28  | 22:45-23:15 | 30m  | | 6a765e9 - bb0c162 |
+| 2/13  | 17:00-18:00 | 1h  | | 78ef2bc - b45433e |
 
-Total: 18h15
+Total: 19h45
 
 ## TODO
 
