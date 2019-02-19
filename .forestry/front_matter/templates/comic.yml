@@ -41,11 +41,3 @@ fields:
   description: The images to display as panels in the comic.
 pages:
 - _comics/1.md
-- _comics/2.md
-- _comics/3.md
-- _comics/4.md
-- _comics/5.md
-- _comics/6.md
-- _comics/7.md
-- _comics/8.md
-- _comics/9.md
