@@ -1,0 +1,18 @@
+---
+layout: comic
+title: 'Korean Ice '
+slug: 2
+hash: '000002'
+images:
+- "/images/comics/np8.jpg"
+- "/images/comics/np7.jpg"
+- "/images/comics/np6.jpg"
+- "/images/comics/np5.jpg"
+- "/images/comics/np4.jpg"
+- "/images/comics/np3.jpg"
+- "/images/comics/np2.jpg"
+- "/images/comics/np1.jpg"
+date: 2019-02-19 02:03:50 +0000
+published: false
+
+---

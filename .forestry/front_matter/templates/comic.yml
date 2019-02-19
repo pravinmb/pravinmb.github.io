@@ -41,3 +41,4 @@ fields:
   description: The images to display as panels in the comic.
 pages:
 - _comics/1.md
+- _comics/korean-ice.md
