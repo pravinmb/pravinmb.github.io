@@ -92,12 +92,12 @@
 
 @media(min-width: 1000px) {
 	.dialog {
-		padding: calc(4vw + 24px) calc(10vw + 24px);
+		padding: calc(4vw + 24px) calc(6vw + 24px);
 	}
 
 	.dialog__close {
 		top: calc(4vw + 40px);
-		right: calc(10vw - 48px);
+		right: calc(6vw - 48px);
 	}
 
 	.dialog__content {
