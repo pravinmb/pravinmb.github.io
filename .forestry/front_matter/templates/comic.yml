@@ -12,7 +12,7 @@ fields:
     required: true
   default: comic
 - type: text
-  name: title
+  name: name
   label: Comic Name
   description: The name of the comic used for the window title, accessibility/screen
     readers, etc.
@@ -20,7 +20,7 @@ fields:
     required: true
   default: Untitled Comic
 - type: text
-  name: slug
+  name: number
   label: Comic Number
   description: The "number" of the comic, e.g. "the 11th comic added to the site".
     Used to identify the comic.
@@ -28,7 +28,7 @@ fields:
     required: true
   default: '1'
 - type: text
-  name: hash
+  name: title
   label: Comic Hash
   description: The "number" of the comic again, but this time with leading zeroes
     to make it 6 characters long. Used to sort/order comics.
@@ -40,4 +40,5 @@ fields:
   label: Comic Panels
   description: The images to display as panels in the comic.
 pages:
-- _comics/1.md
+- _comics/000001.md
+- _comics/000002.md

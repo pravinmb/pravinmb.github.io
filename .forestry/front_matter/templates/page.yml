@@ -22,7 +22,7 @@ fields:
     required: true
   default: '0'
 - type: text
-  name: title
+  name: name
   label: Page Title
   config:
     required: true
@@ -31,14 +31,14 @@ fields:
   default: Page {number}
 - type: text
   label: Page Number
-  name: slug
+  name: number
   description: The number of the page, e.g. "this is the 11th page I've created".
     Used to identify pages.
   config:
     required: true
   default: '1'
 - type: text
-  name: hash
+  name: title
   label: Page Hash
   description: The number of the page again, but this time with leading zeros to make
     it 6 characters. Used to sort/order pages.
