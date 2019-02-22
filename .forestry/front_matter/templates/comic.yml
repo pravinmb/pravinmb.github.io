@@ -39,5 +39,3 @@ fields:
   name: images
   label: Comic Panels
   description: The images to display as panels in the comic.
-pages:
-- _comics/1.md
