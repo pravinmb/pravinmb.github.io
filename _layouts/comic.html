@@ -3,7 +3,7 @@ layout: default
 ---
 
 <main class="--frame">
-	<h3 class="title --content">{{ page.title }}</h3>
+	<h3 class="title --content">{{ page.name }}</h3>
 	<div class="comic--wide">
 		{% for image in page.images %}
 		<div class="comic--wide__panel">
@@ -12,7 +12,7 @@ layout: default
 		{% endfor %}
 	</div>
 
-	{% include paginator.html pages=site.comics hash=page.hash %}
+	{% include paginator.html pages=site.comics number=page.number %}
 
 	<br>
 	<div class="--content">

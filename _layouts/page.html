@@ -6,7 +6,7 @@ layout: default
 
 <main>
 	<div class="paper">
-		{% assign comics = site.comics | sort: "hash" %}
+		{% assign comics = site.comics | sort: "title" %}
 		{% assign positions = site.positions[page.grid] %}
 		{% assign end = positions.size | minus: 1 %}
 		{% for i in (0..end) %}
@@ -19,7 +19,7 @@ layout: default
 </main>
 
 <footer class="footer">
-	{% include paginator.html pages=site.pages hash=page.hash %}
+	{% include paginator.html pages=site.pages number=page.number %}
 </footer>
 
 {% include theme-switch.html %}
