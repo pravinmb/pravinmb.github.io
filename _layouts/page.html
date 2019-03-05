@@ -54,6 +54,7 @@ layout: default
 	var preventScroll = function(e) {
 	    e.preventDefault();
 	    e.stopPropagation();
+	    console.log('touch blocked');
 	    return false;
 	};
 
@@ -74,7 +75,7 @@ layout: default
 	}
 
 	// reset values on dialog close
-	function onClose() {
+	function onClose(e) {
 		dialogComicElement.src = "about:blank";
 		dialogElement.classList.add("dialog--hidden");
 		document.body.classList.remove("--dialog");
@@ -88,6 +89,10 @@ layout: default
 	dialogCloseElement.addEventListener("click", onClose);
 	dialogElement.addEventListener("click", onClose);
 
+	// more prevention of body scrolling when dialog is open
+	dialogElement.addEventListener('touchmove', preventScroll);
+
+    // called when a comic is clicked - get metadata & open the dialog
 	function onClick(event, url, slug) {
 		if ((!url || !slug) && this && this.getAttribute) {
 			url = this.getAttribute("data-url");
