@@ -34,10 +34,21 @@ layout: default
 <script type="text/javascript">
 	{% include footer.js %}
 
+	var scrollingElements = [
+		document.body,
+		document.documentElement,
+		document.getElementsByTagName("html")[0],
+		document.getElementsByTagName("main")[0]
+	];
+
 	var dialogElement = document.getElementById("comic_dialog");
 	var dialogCloseElement = document.getElementById("comic_close");
 	var dialogComicElement = document.getElementById("comic_iframe");
 	var comics = document.getElementsByClassName("paper__item");
+
+	function getWindowHeight() {
+	    return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	}
 
 	// prevent body scrolling (mainly on iOS)
 	var preventScroll = function(e) {
@@ -48,14 +59,17 @@ layout: default
 
 	function preventBodyScroll(shouldPrevent) {
 	    if (shouldPrevent) {
-	        document.documentElement.style.height = window.innerHeight.toString() + "px";
-	        document.body.style.height = window.innerHeight.toString() + "px";
-	        document.body.addEventListener('touchmove', preventScroll, false);
+	        for (var i = 0; i < scrollingElements.length; i++) {
+	            scrollingElements[i].style.height = getWindowHeight().toString() + "px";
+	            scrollingElements[i].addEventListener('touchmove', preventScroll, false);
+	        }
+	        
 	        console.log('preventing scroll');
 	    } else {
-	        document.documentElement.style.height = null;
-	        document.body.style.height = null;
-	        document.body.removeEventListener('touchmove', preventScroll, false);
+	        for (var i = 0; i < scrollingElements.length; i++) {
+	            scrollingElements[i].style.height = null;
+	            scrollingElements[i].removeEventListener('touchmove', preventScroll, false);
+	        }
 	    }
 	}
 
