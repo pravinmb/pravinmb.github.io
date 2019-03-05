@@ -4,6 +4,9 @@
 {% if page.title %}{% assign title = page.title %}{% endif %}
 {% if page.name %}{% assign title = page.name %}{% endif %}
 
+{% assign image = site.icon %}
+{% if page.images %}{% assign image = page.images[0] %}{% endif %}
+
 {% assign description = site.description %}
 {% if page.description %}{% assign description = page.description %}{% endif %}
 
@@ -39,9 +42,14 @@
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@TheNewsPanels">
+<meta name="twitter:site" content="@TheNewsPanels">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ image }}">
+
 <meta name="og:url" content="{{ site.url }}{{ page.url }}">
 <meta name="og:title" content="{{ title }}">
 <meta name="og:description" content="{{ description }}">
-{% if page.images %}
-<meta name="twitter:image" content="{{ site.url }}{{ page.images[0] }}">
-{% endif %}
+<meta name="og:image" content="{{ image }}">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="{{ site.name }}">

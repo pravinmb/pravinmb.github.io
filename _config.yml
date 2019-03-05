@@ -1,6 +1,9 @@
 name: The News Panels
 description: Pravin's Webcomic
-url: https://thenewspanels.com
+icon: "/images/logo.png"
+
+url: "https://thenewspanels.com"
+domainurl: "https://thenewspanels.com"
 baseurl: "/"
 
 collections:
