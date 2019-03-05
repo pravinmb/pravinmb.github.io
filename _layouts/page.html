@@ -39,6 +39,23 @@ layout: default
 	var dialogComicElement = document.getElementById("comic_iframe");
 	var comics = document.getElementsByClassName("paper__item");
 
+	// prevent body scrolling (mainly on iOS)
+	var preventScroll = function(e) {
+	    e.preventDefault();
+	};
+
+	function preventBodyScroll(shouldPrevent) {
+	    if (shouldPrevent) {
+	        document.documentElement.style.height = window.innerHeight.toString() + "px";
+	        document.body.style.height = window.innerHeight.toString() + "px";
+	        document.body.addEventListener('touchmove', preventScroll, false);
+	    } else {
+	        document.documentElement.style.height = null;
+	        document.body.style.height = null;
+	        document.body.removeEventListener('touchmove', preventScroll, false);
+	    }
+	}
+
 	// reset values on dialog close
 	function onClose() {
 		dialogComicElement.src = "about:blank";
@@ -47,6 +64,8 @@ layout: default
 		if (window.history.pushState)
 		    window.history.pushState('', '/', window.location.pathname);
 		else window.location.hash = '';
+
+		preventBodyScroll(false);
 	};
 
 	dialogCloseElement.addEventListener("click", onClose);
@@ -68,6 +87,8 @@ layout: default
 		dialogElement.classList.remove("dialog--hidden");
 		document.body.classList.add("--dialog");
 		window.location.hash = slug;
+
+		preventBodyScroll(true);
 	}
 
 	// apply listeners to comic classes; open dialog when clicked
@@ -98,5 +119,7 @@ layout: default
 		dialogComicElement.src = "{{ site.url }}/comics/" + hash + "/";
 		dialogElement.classList.remove("dialog--hidden");
 		document.body.classList.add("--dialog");
+
+		preventBodyScroll(true);
 	}
 </script>
