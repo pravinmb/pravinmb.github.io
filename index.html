@@ -7,9 +7,8 @@ permalink: /
 <html lang="en">
 	{% assign post = site.pages | last %}
 	<head>
+	    {% include head.html title="Redirecting to Comics Page" %}
 		<meta http-equiv="refresh" content="0; URL='{{ site.url }}{{ post.url }}'">
-		<link href="{{ site.url }}/css/styles.css" rel="stylesheet">
-		<title>Redirecting to {{ site.url }}{{ post.url }}</title>
 	</head>
 	<body>
 		Redirecting to <a href="{{ site.url }}{{ post.url }}">{{ site.url }}{{ post.url }}</a>
