@@ -42,6 +42,8 @@ layout: default
 	// prevent body scrolling (mainly on iOS)
 	var preventScroll = function(e) {
 	    e.preventDefault();
+	    e.stopPropagation();
+	    return false;
 	};
 
 	function preventBodyScroll(shouldPrevent) {
@@ -49,6 +51,7 @@ layout: default
 	        document.documentElement.style.height = window.innerHeight.toString() + "px";
 	        document.body.style.height = window.innerHeight.toString() + "px";
 	        document.body.addEventListener('touchmove', preventScroll, false);
+	        console.log('preventing scroll');
 	    } else {
 	        document.documentElement.style.height = null;
 	        document.body.style.height = null;
