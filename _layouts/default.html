@@ -7,23 +7,7 @@
 <body>
 	{{ content }}
 	<script>
-		function isSafari() {
-			var hasSafariInUa = !!window.navigator.userAgent.match(/Safari/i);
-			var noOtherBrowsersInUa = !window.navigator.userAgent.match(/Chrome|CriOS|OPiOS|mercury|FxiOS|Firefox/i);
-
-			if (!!window.navigator.userAgent.match(/iP(ad|od|hone)/i)) {
-				var webkit = !!window.navigator.userAgent.match(/WebKit/i);
-				return webkit && hasSafariInUa && noOtherBrowsersInUa;
-			} else if (window.safari !== undefined) {
-				return true;
-			} else {
-				return hasSafariInUa && noOtherBrowsersInUa;
-			}
-
-			return false;
-		}
-
-		if (isSafari()) {
+		if (CSS && CSS.supports("( -webkit-overflow-scrolling:touch )")) {
 			document.body.setAttribute("webkit", true);
 		}
 	</script>
