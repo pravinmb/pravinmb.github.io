@@ -80,14 +80,14 @@ layout: default
 		    window.history.pushState('', '/', window.location.pathname);
 		else window.location.hash = '';
 
-		preventBodyScroll(false);
+		//preventBodyScroll(false);
 	};
 
 	dialogCloseElement.addEventListener("click", onClose);
 	dialogElement.addEventListener("click", onClose);
 
 	// more prevention of body scrolling when dialog is open
-	// dialogElement.addEventListener('touchmove', preventScroll);
+	dialogElement.addEventListener('touchmove', preventScroll);
 
     // called when a comic is clicked - get metadata & open the dialog
 	function onClick(event, url, slug) {
@@ -107,7 +107,7 @@ layout: default
 		document.body.classList.add("--dialog");
 		window.location.hash = slug;
 
-		preventBodyScroll(true);
+		//preventBodyScroll(true);
 	}
 
 	// apply listeners to comic classes; open dialog when clicked
@@ -139,6 +139,6 @@ layout: default
 		dialogElement.classList.remove("dialog--hidden");
 		document.body.classList.add("--dialog");
 
-		preventBodyScroll(true);
+		//preventBodyScroll(true);
 	}
 </script>
