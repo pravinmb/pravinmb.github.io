@@ -34,11 +34,12 @@ layout: default
 <script type="text/javascript">
 	{% include footer.js %}
 
+    var _mainElement = document.getElementsByTagName("main")[0];
 	var scrollingElements = [
 		document.body,
 		document.documentElement,
 		document.getElementsByTagName("html")[0],
-		document.getElementsByTagName("main")[0]
+		_mainElement
 	];
 
 	var dialogElement = document.getElementById("comic_dialog");
@@ -60,17 +61,13 @@ layout: default
 
 	function preventBodyScroll(shouldPrevent) {
 	    if (shouldPrevent) {
-	        for (var i = 0; i < scrollingElements.length; i++) {
-	            scrollingElements[i].style.height = getWindowHeight().toString() + "px";
-	            scrollingElements[i].addEventListener('touchmove', preventScroll, false);
-	        }
+            _mainElement.style.height = getWindowHeight().toString() + "px";
+            _mainElement.addEventListener('touchmove', preventScroll, false);
 	        
 	        console.log('preventing scroll');
 	    } else {
-	        for (var i = 0; i < scrollingElements.length; i++) {
-	            scrollingElements[i].style.height = null;
-	            scrollingElements[i].removeEventListener('touchmove', preventScroll, false);
-	        }
+	        _mainElement.style.height = null;
+	        _mainElement.removeEventListener('touchmove', preventScroll, false);
 	    }
 	}
 
@@ -90,7 +87,7 @@ layout: default
 	dialogElement.addEventListener("click", onClose);
 
 	// more prevention of body scrolling when dialog is open
-	dialogElement.addEventListener('touchmove', preventScroll);
+	// dialogElement.addEventListener('touchmove', preventScroll);
 
     // called when a comic is clicked - get metadata & open the dialog
 	function onClick(event, url, slug) {
