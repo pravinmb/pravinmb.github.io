@@ -13,7 +13,9 @@ layout: default
 		{% assign position = positions[i] %}
 		{% assign num = page.start | minus: 1 | plus: i %}
 		{% assign comic = comics[num] %}
+		{% if comic %}
 		{% include comic.html comic=comic rowStart=position.rowStart rowEnd=position.rowEnd colStart=position.colStart colEnd=position.colEnd %}
+		{% endif %}
 		{% endfor %}
 	</div>
 </main>

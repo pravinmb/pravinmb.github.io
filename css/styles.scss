@@ -155,6 +155,10 @@ main {
 	-webkit-transition: transform .25s;
 }
 
+main.--frame {
+    margin: 0;
+}
+
 .--content {
 	margin-left: calc(5vw + 10px);
 	margin-right: calc(5vw + 10px);
