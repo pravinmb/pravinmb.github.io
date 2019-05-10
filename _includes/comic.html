@@ -2,7 +2,7 @@
 	<div class="comic__container">
 		<div class="comic__images">
 			{% for image in include.comic.images %}
-			<img class="img comic__images__image" src="{{ site.url }}{{ image }}">
+			<img class="lozad img img--lazy comic__images__image" data-src="{{ site.url }}{{ image }}">
 			{% endfor %}
 		</div>
 		<div class="comic__prompt">

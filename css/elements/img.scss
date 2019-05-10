@@ -18,6 +18,14 @@
 	left: 0;
 }
 
+.img--lazy {
+    opacity: 0;
+}
+
+.img--loaded {
+    opacity: 1;
+}
+
 @media(min-width: 1000px) {
 	.img__container--wide {
 		position: unset;

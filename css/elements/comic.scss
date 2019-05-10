@@ -31,6 +31,13 @@
 
 .comic__images__image {
   display: none;
+  width: 350px;
+  height: 100%;
+}
+
+.comic__images__image.img--loaded {
+  width: auto;
+  height: auto;
   max-width: 55.55%;
   max-height: 100%;
 }
