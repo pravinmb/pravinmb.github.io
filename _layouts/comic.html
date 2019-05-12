@@ -4,7 +4,7 @@ layout: default
 
 <main class="--frame">
     <h3 class="title --content">{{ page.name }}</h3>
-    <div class="comic-wrapper">
+    <div class="comic__wrapper">
         <div id="comicPanels" class="comic--wide">
             {% for image in page.images %}
             <div class="comic--wide__panel">
@@ -12,7 +12,12 @@ layout: default
             </div>
             {% endfor %}
         </div>
-        <button class="comic-wrapper__button" onclick="scrollComicNext()"><i class="material-icons">chevron_right</i></button>
+        <button class="comic__button comic__button--right" onclick="scrollComicNext()">
+            <i class="material-icons">chevron_right</i>
+        </button>
+        <button class="comic__button comic__button--left" onclick="scrollComicPrevious()">
+            <i class="material-icons">chevron_left</i>
+        </button>
     </div>
 
     <br>
@@ -36,10 +41,27 @@ function scrollComicNext() {
         _comicPanelNum++;
     } while (_comicPanelsContainer.children[_comicPanelNum] && !_comicPanelsContainer.children[_comicPanelNum].scrollIntoView);
 
-    if (_comicPanelNum > _comicPanelsContainer.children.length)
+    if (_comicPanelNum >= _comicPanelsContainer.children.length)
         _comicPanelNum = 0;
 
     if (_comicPanelsContainer.children[_comicPanelNum]) {
+        _comicPanelsContainer.children[_comicPanelNum].focus();
+        _comicPanelsContainer.children[_comicPanelNum].scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+}
+
+function scrollComicPrevious() {
+    do {
+        _comicPanelNum--;
+    } while (_comicPanelsContainer.children[_comicPanelNum] && !_comicPanelsContainer.children[_comicPanelNum].scrollIntoView);
+
+    if (_comicPanelNum < 0)
+        _comicPanelNum = _comicPanelsContainer.children.length - 1;
+
+    if (_comicPanelsContainer.children[_comicPanelNum]) {
+        _comicPanelsContainer.children[_comicPanelNum].focus();
         _comicPanelsContainer.children[_comicPanelNum].scrollIntoView({
             behavior: 'smooth'
         });

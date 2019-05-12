@@ -86,7 +86,7 @@
   height: auto;
 }
 
-.comic-wrapper__button {
+.comic__button {
     display: none;
 }
 
@@ -104,6 +104,7 @@
     height: 500px;
     font-size: 0;
     overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
   }
 
@@ -123,13 +124,18 @@
   
   .frame::-webkit-scrollbar-track { 
       background-color: #FFFFFF; 
-      border-radius: 8px; 
+      border-radius: 8px;
   }
 
   .comic--wide__panel {
-    display: inline;
+    display: inline-block;
     height: 100%;
     width: auto;
+
+    // a hack to prevent scrolling down the page on focus change
+    // in Safari/WebKit
+    padding-top: 500px;
+    transform: translateY(-500px);
   }
 
   .comic--wide__panel__img {
@@ -138,15 +144,14 @@
     width: auto;
   }
 
-  .comic-wrapper {
+  .comic__wrapper {
     position: relative;
     overflow: hidden;
   }
   
-  .comic-wrapper__button {
+  .comic__button {
     display: block;
     position: absolute;
-    right: 0;
     top: 50%;
     transform: translateY(-50%);
 
@@ -157,16 +162,29 @@
     width: 50px;
     height: 100px;
     border: none;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     
     cursor: pointer;
   }
 
-  .comic-wrapper__button i.material-icons {
+  .comic__button i.material-icons {
     color: #FFFFFF;
     display: block;
     font-size: 3em;
   }
+
+  .comic__button--left {
+    left: 0;
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .comic__button--right {
+    right: 0;
+
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
 }
