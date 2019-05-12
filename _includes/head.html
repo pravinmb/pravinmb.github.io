@@ -1,8 +1,8 @@
 <meta charset="utf-8">
 
 {% assign title = site.name %}
-{% if page.title %}{% assign title = page.title %}{% endif %}
-{% if page.name %}{% assign title = page.name %}{% endif %}
+{% if page.title %}{% assign title = site.name | append: ' - ' | append: page.title %}{% endif %}
+{% if page.name %}{% assign title = site.name | append: ' - ' | append: page.name %}{% endif %}
 {% if include.title %}{% assign title = include.title %}{% endif %}
 
 {% assign image = site.icon %}
