@@ -131,11 +131,6 @@
     display: inline-block;
     height: 100%;
     width: auto;
-
-    // a hack to prevent scrolling down the page on focus change
-    // in Safari/WebKit
-    padding-top: 500px;
-    transform: translateY(-500px);
   }
 
   .comic--wide__panel__img {
