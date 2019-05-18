@@ -2,6 +2,9 @@ name: The News Panels
 description: "The news in comics."
 icon: "/images/logo.png"
 
+twitter: "@TheNewsPanels"
+instagram: "thenewspanels"
+
 url: "https://thenewspanels.com"
 domainurl: "https://thenewspanels.com"
 baseurl: "/"
