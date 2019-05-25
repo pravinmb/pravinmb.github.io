@@ -32,7 +32,8 @@ address, browser type, browser version, the pages of our Site that you visit, th
 date of your visit, the time spent on those pages, and other statistics.
 
 In addition, we may use third party services such as Google Analytics that collect, monitor
-and analyze this Log Data.
+and analyze this Log Data. The privacy policy for Google Analytics can be found
+[here](https://policies.google.com/privacy).
 
 ## Communications
 
