@@ -1,6 +1,6 @@
 ---
 layout: text
-title: "Contact Us"
+head-title: "Contact Us"
 permalink: /about/contact/
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: text
-title: "About"
+head-title: "About"
 permalink: /about/
 ---
 
