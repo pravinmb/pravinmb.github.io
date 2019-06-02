@@ -109,6 +109,11 @@ sass:
 pwa:
     dest_js_directory: js
 
+algolia:
+    application_id: 'X2CM5LGGSE'
+    index_name: 'prod_comics'
+
 plugins:
   - jekyll-sitemap
   - jekyll-pwa-plugin
+  - jekyll-algolia
