@@ -11,8 +11,8 @@ baseurl: "https://thenewspanels.com"
 domainurl: "https://thenewspanels.com"
 baseurl: "/"
 
-source: "."
-destination: "../webcomic-deploy/"
+source: "./"
+destination: "/tmp/thenewspanels/"
 
 collections:
     comics:
