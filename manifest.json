@@ -1,8 +1,10 @@
 ---
+permalink: /manifest.json
 ---
+
 {
   "name": "{{ site.name }}",
-  "short_name": "{{ site.name }}",
+  "short_name": "{{ site.shortname }}",
   "icons": [{
         "src": "/images/favicon-96.png",
         "sizes": "96x96",

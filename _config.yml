@@ -1,4 +1,5 @@
 name: The News Panels
+shortname: News Panels
 description: "The news in comics."
 icon: "/images/logo.png"
 
@@ -6,6 +7,7 @@ twitter: "@TheNewsPanels"
 instagram: "thenewspanels"
 
 url: "https://thenewspanels.com"
+baseurl: "https://thenewspanels.com"
 domainurl: "https://thenewspanels.com"
 baseurl: "/"
 
@@ -101,5 +103,9 @@ exclude:
 sass:
     sass_dir: ./css
 
+pwa:
+    dest_js_directory: js
+
 plugins:
   - jekyll-sitemap
+  - jekyll-pwa-plugin
