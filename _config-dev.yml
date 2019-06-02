@@ -1,2 +1,5 @@
 url: "http://localhost:8080"
 baseurl: "http://localhost:8080"
+
+source: "."
+destination: "_site/"
