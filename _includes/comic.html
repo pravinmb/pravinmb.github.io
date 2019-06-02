@@ -1,4 +1,6 @@
-<a class="paper__item comic" style="grid-area: {{ include.rowStart }} / {{ include.colStart }} / {{ include.rowEnd }} / {{ include.colEnd }};" data-url="{{ include.comic.url }}" data-slug="{{ include.comic.title }}" onclick="onClick(this, '{{ include.comic.url }}', '{{ include.comic.number }}');" href="{{ site.url }}{{ include.comic.url }}">
+<div class="paper__item comic" style="grid-area: {{ include.rowStart }} / {{ include.colStart }} / {{ include.rowEnd }} / {{ include.colEnd }};" data-url="{{ include.comic.url }}" data-slug="{{ include.comic.title }}" onclick="onClick(this, '{{ include.comic.url }}', '{{ include.comic.number }}');">
+	<h2 class="--sr-only">{{ include.comic.page-title }}</h2>
+	<p class="--sr-only">{{ include.comic.page-desc }}</p>
 	<div class="comic__container">
 		<div class="comic__images">
 			{% for image in include.comic.images %}
@@ -16,4 +18,4 @@
 		<span>Comments&nbsp;&nbsp;</span>
 		<i class="material-icons">comment</i>
 	</a>
-</a>
+</div>

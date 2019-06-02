@@ -3,7 +3,8 @@ layout: default
 ---
 
 <main class="--frame">
-    <h3 class="title --content">{{ page.name }}</h3>
+    <h3 class="title --content">{{ page.page-title }}</h3>
+    <p class="--sr-only">{{ page.page-desc }}</p>
     <div class="comic__wrapper">
         <div id="comicPanels" class="comic--wide">
             {% for image in page.images %}
@@ -20,10 +21,6 @@ layout: default
         </button>
     </div>
 
-    <br>
-    <div class="--content">
-        {{ content }}
-    </div>
     <br>
     {% include comments.html %}
 </main>

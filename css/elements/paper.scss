@@ -3,10 +3,21 @@
 }
 
 .paper__item {
-	display: inline-block;
+	display: block;
+	margin: 16px;
+	padding: 0;
+	border: 2px solid #000;
+	border: 2px solid var(--normal-color-focus);
 }
 
 @media(min-width: 1000px) {
+	.paper__item {
+		display: inline-block;
+		margin: 0;
+		padding: 1vw;
+		border: none;
+	}
+
 	.paper {
 		display: grid;
 		grid-auto-flow: dense;

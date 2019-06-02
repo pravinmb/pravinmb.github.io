@@ -11,14 +11,6 @@ fields:
     required: true
   default: comic
 - type: text
-  name: name
-  label: Comic Name
-  description: The name of the comic used for the window title, accessibility/screen
-    readers, etc.
-  config:
-    required: true
-  default: Untitled Comic
-- type: text
   name: number
   label: Comic Number
   description: The "number" of the comic, e.g. "the 11th comic added to the site".
@@ -34,6 +26,21 @@ fields:
   config:
     required: true
   default: '000001'
+- type: text
+  name: page-title
+  label: Comic Name
+  description: The name of the comic used for the window title, accessibility/screen
+    readers, etc.
+  config:
+    required: true
+  default: Untitled Comic
+- type: text
+  name: page-desc
+  label: Comic Description
+  description: 'A short 1-2 sentence description of the comic, used for SEO and embeds on social media.'
+  config:
+    required: true
+  default: This comic does not have a description... yet.
 - type: image_gallery
   name: images
   label: Comic Panels
