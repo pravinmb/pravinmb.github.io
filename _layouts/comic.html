@@ -2,6 +2,19 @@
 layout: default
 ---
 
+{% assign currNum = page.number | plus: 0 %}
+{% for pg in site.pages %}
+{% assign pgStart = pg.start | plus: 0 %}
+{% if pgStart <= currNum %}{% assign currPage = pg %}{% endif %}
+{% endfor %}
+
+{% if currPage %}
+<script type="text/javascript">
+    if (parent.location == self.location)
+        document.location.href = "{{ site.url }}{{ currPage.url }}#{{ page.title }}";
+</script>
+{% endif %}
+
 <main class="--frame">
     <h3 class="title --content">{{ page.page-title }}</h3>
     <p class="--sr-only">{{ page.page-desc }}</p>

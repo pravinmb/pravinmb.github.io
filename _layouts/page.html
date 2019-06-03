@@ -29,7 +29,17 @@ layout: default
 	</div>
 </div>
 
+<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
 <script type="text/javascript">
+	page('/{{ page.number }}/', function() {
+
+	});
+	page('/comics/:id/', function(id) {
+		console.log("navigated to " + id);
+	});
+	page();
+
 	{% include footer.js %}
 
     var _mainElement = document.getElementsByTagName("main")[0];
@@ -78,6 +88,8 @@ layout: default
 		    window.history.pushState('', '/', window.location.pathname);
 		else window.location.hash = '';
 
+		page('/{{ page.number }}/');
+
 		//preventBodyScroll(false);
 	};
 
@@ -105,6 +117,8 @@ layout: default
 		document.body.classList.add("--dialog");
 		window.location.hash = slug;
 
+		page(url);
+
 		//preventBodyScroll(true);
 	}
 
@@ -113,30 +127,23 @@ layout: default
 		if (!comics[i] || !comics[i].addEventListener)
 			continue;
 
-		const comic = comics[i];
-
 		comics[i].addEventListener("click", onClick);
 		comics[i].addEventListener("touchstart click", onClick);
 		comics[i].addEventListener("click tap", onClick);
 	}
 
 	// change hash on dialog change (ex: pagination widget used)
-	function onLoad() {
+	/*function onLoad() {
 		let path = this.contentWindow.location.pathname.split("/");
 		if (path[1] === "comics" && !isNaN(path[2]) && parseInt(Number(path[2])) == path[2])
 			window.location.hash = path[2];
 	};	
 
 	dialogComicElement.addEventListener("load", onLoad);
-	dialogComicElement.onload = onLoad;
+	dialogComicElement.onload = onLoad;*/
 
 	// load comic in dialog if hash is set
 	var hash = window.location.hash ? window.location.hash.substring(1) : null;
-	if (hash && !isNaN(hash) && parseInt(Number(hash)) == hash) {
-		dialogComicElement.src = "{{ site.url }}/comics/" + hash + "/";
-		dialogElement.classList.remove("dialog--hidden");
-		document.body.classList.add("--dialog");
-
-		//preventBodyScroll(true);
-	}
+	if (hash && !isNaN(hash) && parseInt(Number(hash)) == hash)
+		onClick(null, "/comics/" + hash + "/", hash);
 </script>
