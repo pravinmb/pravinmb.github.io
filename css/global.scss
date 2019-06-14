@@ -1,3 +1,19 @@
+$box-fixed-x: 4rem;
+$box-fluid-x: 2vw;
+$box-x: calc(#{$box-fixed-x} + #{$box-fluid-x});
+
+$box-fixed-y: .5rem;
+$box-fluid-y: 2vw;
+$box-y: calc(#{$box-fixed-y} + #{$box-fluid-y});
+
+$box-border-size: 2px;
+
+$font-heading: 'Playfair Display SC', 'Lora', serif;
+$font-body: 'Lora', monospace;
+
+$shadow-light: 0 0.2em 1.2em;
+$shadow-full: 0 0.4em 1.2em;
+
 $theme: (
         "normal-color": #424242,
         "normal-color-text": #616161,
@@ -19,7 +35,7 @@ $theme: (
         "accent-outline-fade": rgba(24, 53, 28, 0.3),
         "accent-outline-fade2": rgba(24, 53, 28, 0.5),
         "accent-inverse": #FFFFFF,
-        "image-brightness-focus": 0
+        "attr-filter-color": contrast(0) brightness(0)
 );
 
 $theme-dark: (
@@ -45,7 +61,7 @@ $theme-dark: (
         "accent-outline-fade": rgba(108, 216, 137, 0.3),
         "accent-outline-fade2": rgba(108, 216, 137, 0.5),
         "accent-inverse": #000000,
-        "image-brightness-focus": 2
+        "attr-filter-color": contrast(0) brightness(2)
 
 );
 
@@ -55,7 +71,37 @@ $theme-dark: (
   }
 }
 
-@mixin var($var, $key) {
-  #{$var}: #{map-get($theme, $key)};
-  #{$var}: var(--#{$key});
+@function var-defaults($keys, $separator: space) {
+  $list: ();
+
+  @each $key in $keys {
+    @if map-has-key($theme, $key) {
+      $list: append($list, #{map-get($theme, $key)}, $separator: $separator);
+    }
+    @else {
+      $list: append($list, $key, $separator: $separator);
+    }
+  }
+
+  @return $list;
+}
+
+@function var-values($keys, $separator: space) {
+  $list: ();
+
+  @each $key in $keys {
+    @if map-has-key($theme, $key) {
+      $list: append($list, var(--#{$key}), $separator: $separator);
+    }
+    @else {
+      $list: append($list, $key, $separator: $separator);
+    }
+  }
+
+  @return $list;
+}
+
+@mixin var($attr, $keys, $separator: space) {
+  #{$attr}: var-defaults($keys);
+  #{$attr}: var-values($keys);
 }

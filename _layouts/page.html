@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% include banner.html %}
-
 <main>
+	{% include banner.html %}
+
 	<div class="paper">
 		{% assign comics = site.comics | sort: "title" %}
 		{% assign positions = site.positions[page.grid] %}

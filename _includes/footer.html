@@ -2,8 +2,7 @@
     {% if include.paginator %}
     {% include paginator.html pages=include.paginator_pages number=include.paginator_number %}
     {% endif %}
-    <hr>
-    <p class="rtable">
+    <p class="footer__main rtable">
         <span>
             <b>About...</b><br>
             <a href="{{ site.url }}/about/contact/">Contact Us</a><br>
@@ -19,6 +18,5 @@
             {% include theme-switch.html %}
         </span>
     </p>
-    <hr>
     <p>&copy; {{ site.time | date: '%Y' }} The News Panels Inc.</p>
 </div>

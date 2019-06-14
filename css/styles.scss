@@ -4,7 +4,7 @@
 @import "global.scss";
 
 * {
-	font-family: 'Lora', monospace;
+	font-family: $font-body;
 	animation-name: fadeIn;
 	animation-duration: .3s;
 	animation-timing-function: ease-out;
@@ -105,26 +105,30 @@ main {
 	@include var("background-color", "normal-background");
 
 	display: block;
-	margin: 0 2vw;
+	padding: $box-fixed-y 0;
 	
 	transition: transform .25s;
 	-moz-transition: transform .25s;
 	-webkit-transition: transform .25s;
 }
 
-main.--frame {
-    margin: 0;
+.--content {
+	margin-left: $box-fluid-x;
+	margin-right: $box-fluid-x;
 }
 
-.--content {
-	margin-left: calc(5vw + 10px);
-	margin-right: calc(5vw + 10px);
+main.--content {
+	padding: $box-y $box-x;
+	margin: 0;
+}
+
+body main.--frame {
+	margin: 0;
+	padding: $box-fixed-y 0;
+	min-height: calc(100vh - #{2 * $box-fixed-y});
 }
 
 body[webkit] main.--frame {
-	margin: 0;
-	padding: 0 calc(4rem + 2vw);
-	
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -156,4 +160,18 @@ body[webkit] main.--frame {
 	.--mobile {
 		display: none;
 	}
+
+	main {
+		margin: $box-y $box-x;
+		padding: 0;
+	}
+
+	.--content {
+		margin-left: $box-x;
+		margin-right: $box-x;
+	}
+}
+
+main.--frame {
+	margin: 0;
 }

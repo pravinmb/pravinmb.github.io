@@ -1,3 +1,5 @@
+@import "../global.scss";
+
 .paper {
 	display: block;
 }
@@ -6,8 +8,11 @@
 	display: block;
 	margin: 16px;
 	padding: 0;
-	border: 2px solid #000;
-	border: 2px solid var(--normal-color-focus);
+
+	@include var(
+		"border",
+		(2px solid "normal-color-focus")
+	);
 }
 
 @media(min-width: 1000px) {

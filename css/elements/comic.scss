@@ -1,16 +1,18 @@
+@import "../global.scss";
+
 .comic {
   position: relative;
   overflow: hidden;
   padding: 1vw;
   cursor: pointer;
-  transition: box-shadow .25s;
+  transition: background-color .25s, filter .25s;
 }
 
 .comic:hover,
 .comic:focus {
   outline: none;
-  box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.37);
-  box-shadow: 0 0.4em 1.2em var(--accent-outline-fade);
+  filter: brightness(0.8);
+  @include var("background-color", "accent-outline-fade");
 }
 
 .comic__container {
@@ -51,8 +53,8 @@
   width: 50vw;
   height: 50vw;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -2px;
+  bottom: -2px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #FFF);
   background: linear-gradient(135deg, var(--normal-background-alpha), var(--normal-background-alpha), var(--normal-background));
 }
@@ -65,8 +67,8 @@
   margin: 1em;
   font-size: 2vw;
   font-weight: bolder;
-  color: #000;
-  color: var(--normal-color-focus);
+
+  @include var("color", "normal-color-focus");
 }
 
 .comic__prompt__text > i.material-icons {
