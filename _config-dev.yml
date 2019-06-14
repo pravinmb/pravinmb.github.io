@@ -1,5 +1,5 @@
-url: "http://localhost:8080"
-baseurl: "http://localhost:8080"
+url: "http://localhost:4000"
+baseurl: "http://localhost:4000"
 
 source: "."
 destination: "_site/"
