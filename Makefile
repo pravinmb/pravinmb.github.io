@@ -1,7 +1,9 @@
 
-start:
-	open http://localhost:4000
-	bundle exec jekyll serve --config _config.yml,_config-dev.yml
+start: build
+	open http://localhost:8080
+	cd _site/; \
+	mogrify -quality 5 ./images/comics/*/*/*/*.jpg; \
+	http-server
 
 build:
 	bundle exec jekyll build --config _config.yml,_config-dev.yml
@@ -15,6 +17,7 @@ deploy: algolia
 	git clone git@github.com:pravinmb/pravinmb.github.io /tmp/thenewspanels -b gh-pages
 	bundle exec jekyll build
 	cd /tmp/thenewspanels/; \
+	mogrify -quality 5 ./images/comics/*/*/*/*.jpg; \
 	git add .; \
 	git commit -m "make deploy"; \
 	git push;
