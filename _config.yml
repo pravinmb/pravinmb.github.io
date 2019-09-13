@@ -12,7 +12,7 @@ baseurl: "/"
 collections:
     comics:
         output: true
-        permalink: comics/:name/
+        permalink: comic/:name/
     pages:
         output: true
         permalink: :name/
