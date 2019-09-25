@@ -5,9 +5,9 @@ icon: "/images/logo.png"
 twitter: "@TheNewsPanels"
 instagram: "thenewspanels"
 
-url: "https://thenewspanels.com"
+url: "https://thenewspanels.com/1"
 domainurl: "https://thenewspanels.com"
-baseurl: "/1/"
+baseurl: "/"
 
 collections:
     comics:
