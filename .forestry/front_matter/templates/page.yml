@@ -57,4 +57,5 @@ fields:
     required: true
   default: '1'
 pages:
-- _pages/000002.md
+- _pages/2.md
+- _pages/1.md
