@@ -56,3 +56,5 @@ fields:
     step: '1'
     required: true
   default: '1'
+pages:
+- _pages/000002.md
