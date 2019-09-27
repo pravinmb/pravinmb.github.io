@@ -58,4 +58,7 @@ fields:
   default: '1'
 pages:
 - _pages/1.md
+<<<<<<< Updated upstream
 - _pages/2.md
+=======
+>>>>>>> Stashed changes
